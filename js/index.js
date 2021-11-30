@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Create candidate
             let candidate = new Candidate();
-            candidate.register(lastname.value, firstname.value, email.value, cin.value, phone.value, city.value)
+            candidate.signUp(lastname.value, firstname.value, email.value, cin.value, phone.value, city.value)
         }
     })
 
