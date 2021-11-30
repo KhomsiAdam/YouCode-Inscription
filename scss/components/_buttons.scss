@@ -2,3 +2,9 @@
 @use '../abstracts/' as *;
 
 /* Buttons */
+.button {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}

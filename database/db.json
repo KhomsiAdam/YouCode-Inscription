@@ -1,107 +1,94 @@
 {
-    "candidate": [
+  "candidate": [
+  ],
+  "onlinetest": [
+    {
+      "id": 1,
+      "question": "Who founded Apple Computer?",
+      "choices": [
         {
-            "firstname": "Test",
-            "lastname": "Test",
-            "email": "test@email.com",
-            "cin": "A123456",
-            "phone": "123456789",
-            "city": "Casablanca",
-            "status": "Accepted",
-            "created_at": "2021-11-30",
-            "id": 1,
-            "login": "UCODE0001",
-            "password": "test123"
+          "choice1": "Stephen Fry",
+          "choice2": "Bill Gates",
+          "choice3": "Steve Jobs"
         }
-    ],
-    "onlinetest": [
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Which of these is not a peripheral, in computer terms?",
+      "choices": [
         {
-            "id": 1,
-            "question": "Who founded Apple Computer?",
-            "choices": [
-                {
-                    "choice1": "Stephen Fry",
-                    "choice2": "Bill Gates",
-                    "choice3": "Steve Jobs"
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "question": "Which of these is not a peripheral, in computer terms?",
-            "choices": [
-                {
-                    "choice1": "Keyboard",
-                    "choice2": "Mouse",
-                    "choice3": "Motherboard"
-                }
-            ]
-        },
-        {
-            "id": 3,
-            "question": "Which of the following is not one of the early “protocols,” or ways to use the Internet?",
-            "choices": [
-                {
-                    "choice1": "Blogging",
-                    "choice2": "Telnet",
-                    "choice3": "FTP"
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "question": " Which of these is not a kind of computer?",
-            "choices": [
-                {
-                    "choice1": "Apple",
-                    "choice2": "Toshiba",
-                    "choice3": "Lada"
-                }
-            ]
-        },
-        {
-            "id": 5,
-            "question": "Which of these products is not made by the Apple Corporation?",
-            "choices": [
-                {
-                    "choice1": "IMAX",
-                    "choice2": "iMac",
-                    "choice3": "iPod"
-                }
-            ]
+          "choice1": "Keyboard",
+          "choice2": "Mouse",
+          "choice3": "Motherboard"
         }
-    ],
-    "seriousgame": [
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is not one of the early “protocols,” or ways to use the Internet?",
+      "choices": [
         {
-            "id": 1,
-            "case": "Marquetez un produit que vous avez créer."
+          "choice1": "Blogging",
+          "choice2": "Telnet",
+          "choice3": "FTP"
         }
-    ],
-    "motivation": [
+      ]
+    },
+    {
+      "id": 4,
+      "question": " Which of these is not a kind of computer?",
+      "choices": [
         {
-            "id": 1,
-            "question": "Pourquoi avez vous choisis notre école ?"
+          "choice1": "Apple",
+          "choice2": "Toshiba",
+          "choice3": "Lada"
         }
-    ],
-    "administrative": [
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Which of these products is not made by the Apple Corporation?",
+      "choices": [
         {
-            "question": "Question 1.",
-            "id": 1
-        },
-        {
-            "question": "Question 2.",
-            "id": 2
-        },
-        {
-            "question": "Question 3.",
-            "id": 3
+          "choice1": "IMAX",
+          "choice2": "iMac",
+          "choice3": "iPod"
         }
-    ],
-    "technical": [
-        {
-            "exercise": "Créer une liste dynamique d'utilisateurs.",
-            "technology": "C",
-            "id": 1
-        }
-    ]
+      ]
+    }
+  ],
+  "seriousgame": [
+    {
+      "id": 1,
+      "case": "Marquetez un produit que vous avez créer."
+    }
+  ],
+  "motivation": [
+    {
+      "id": 1,
+      "question": "Pourquoi avez vous choisis notre école ?"
+    }
+  ],
+  "administrative": [
+    {
+      "question": "Question 1.",
+      "id": 1
+    },
+    {
+      "question": "Question 2.",
+      "id": 2
+    },
+    {
+      "question": "Question 3.",
+      "id": 3
+    }
+  ],
+  "technical": [
+    {
+      "exercise": "Créer une liste dynamique d'utilisateurs.",
+      "technology": "C",
+      "id": 1
+    }
+  ]
 }
