@@ -70,7 +70,7 @@ export default class Candidate {
 
         // Get the candidate by it's username
         const data = await fetchWithGet(`http://localhost:3000/candidate/?username=${this.username}`);
-        if (data) {
+        if (data.length > 0) {
             console.log(data);
             console.log('fetched password: ' + data[0].password);
             console.log('input password: ' + this.password);
