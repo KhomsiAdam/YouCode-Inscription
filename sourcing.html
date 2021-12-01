@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Description -->
-    <title>YouCode Online Test</title>
-    <meta name="description" content="Test en ligne après inscription à YouCode">
+    <title>YouCode Sourcing</title>
+    <meta name="description" content="Sourcing après avoir passer le test en ligne à YouCode">
 
     <!-- Google Fonts Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,7 +22,50 @@
 </head>
 
 <body>
-    <h1>Test en ligne.</h1>
+    <div class="ss-container">
+        <h1>Sourcing.</h1>
+        <button class="button" id="logout">Logout</button>
+    </div>
+    <section class="seriousgame">
+        <form class="form ss-container" id="serious-game">
+            <h2 class="seriousgame__title">Serious game</h2>
+            <p class="seriousgame__case"></p>
+            <p class="seriousgame__objective"></p>
+            <textarea class="form__textarea ss-shadow-3" name="s-response" id="s-response" cols="30" rows="10"></textarea>
+            <button class="form__button" id="serious-submit">Soummettre une réponse</button>
+        </form>
+    </section>
+
+    <section class="motivation">
+        <form class="form ss-container" id="motivation">
+            <h2 class="motivation__title">Test de motivation</h2>
+            <p class="motivation__question"></p>
+            <textarea class="form__textarea ss-shadow-3" name="m-answer" id="m-answer" cols="30" rows="10"></textarea>
+            <button class="form__button" id="motivation-submit">Soummettre une réponse</button>
+        </form>
+    </section>
+
+    <section class="administrative">
+        <form class="form ss-container" id="administrative">
+            <h2 class="administrative__title">Test administratif</h2>
+            <p class="administrative__question"></p>
+            <textarea class="form__textarea ss-shadow-3" name="a-answer-1" id="a-answer-1" cols="30" rows="10"></textarea>
+            <p class="administrative__question"></p>
+            <textarea class="form__textarea ss-shadow-3" name="a-answer-2" id="a-answer-2" cols="30" rows="10"></textarea>
+            <p class="administrative__question"></p>
+            <textarea class="form__textarea ss-shadow-3" name="a-answer-3" id="a-answer-3" cols="30" rows="10"></textarea>
+            <button class="form__button" id="administrative-submit">Soummettre une réponse</button>
+        </form>
+    </section>
+
+    <section class="technical">
+        <form action="" class="form ss-container" id="technical">
+            <h2 class="technical__title">Test technique</h2>
+            <p class="technical__question"></p>
+            <textarea class="form__textarea ss-shadow-3" name="t-answer" id="t-answer" cols="30" rows="10"></textarea>
+            <button class="form__button" id="technical-submit">Soummettre une réponse</button>
+        </form>
+    </section>
 </body>
 
 </html>

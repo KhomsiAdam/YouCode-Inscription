@@ -450,17 +450,26 @@ select {
   flex-direction: column;
   font-size: 1.6rem;
   gap: 1em;
+  padding-block: 2em;
 }
 .form__input {
   height: 50px;
   width: 100%;
   border: 1px solid black;
   border-radius: 5px;
+  padding: 0 1em;
 }
 .form__button {
   height: 50px;
   width: 100%;
   border-radius: 5px;
+}
+.form__textarea {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1em;
+  resize: none;
 }
 
 /* Custom checkboxes */
