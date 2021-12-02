@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check user authenticity
     auth();
 
-    // Hndling the sign up / register
+    // Handling the sign up / register
     const lastname = document.getElementById('lastname');
     const firstname = document.getElementById('firstname');
     const email = document.getElementById('email');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phone = document.getElementById('phone');
     const city = document.getElementById('city');
     
-    document.getElementById('sign-up-button').addEventListener('click', async function (e) {
+    document.getElementById('sign-up-button').addEventListener('click', (e) => {
         e.preventDefault();
         // Check for empty values
         if (lastname.value === '' || firstname.value === '' || email.value === '' || cin.value === '' || phone.value === '' || city.value === '') {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Create candidate
             let candidate = new Candidate();
-            candidate.signUp(lastname.value, firstname.value, email.value, cin.value, phone.value, city.value)
+            candidate.signUp(lastname.value, firstname.value, email.value, cin.value, phone.value, city.value);
         }
     })
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = document.getElementById('username');
     const password = document.getElementById('password');
 
-    document.getElementById('sign-in-button').addEventListener('click', async function (e) {
+    document.getElementById('sign-in-button').addEventListener('click', (e) => {
         e.preventDefault();
         // Check for empty values
         if (username.value === '' || password.value === '') {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Sign in the candidate to pass the online test
             let candidate = new Candidate();
-            candidate.signIn(username.value, password.value)
+            candidate.signIn(username.value, password.value);
         }
     })
 })

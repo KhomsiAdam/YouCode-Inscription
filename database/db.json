@@ -1,94 +1,148 @@
 {
   "candidate": [
+    {
+      "id": 1,
+      "lastname": "doe",
+      "firstname": "john",
+      "email": "johndoe@email.com",
+      "cin": "A998877",
+      "phone": "123456789",
+      "city": "Safi",
+      "status": "Accepted",
+      "created_at": "2021-11-30",
+      "username": "johndoe",
+      "password": "test123"
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "lastname": "admin",
+      "firstname": "admin",
+      "email": "admin@email.com",
+      "ucode": "U123456",
+      "phone": "76876876868",
+      "city": "Safi",
+      "status": "Activated",
+      "username": "admin",
+      "password": "admin123"
+    }
   ],
   "onlinetest": [
     {
       "id": 1,
       "question": "Who founded Apple Computer?",
-      "choices": [
-        {
-          "choice1": "Stephen Fry",
-          "choice2": "Bill Gates",
-          "choice3": "Steve Jobs"
-        }
-      ]
+      "choices": {
+        "choice1": "Stephen Fry",
+        "choice2": "Bill Gates",
+        "choice3": "Steve Jobs"
+      },
+      "answser": "Steve Jobs"
     },
     {
       "id": 2,
       "question": "Which of these is not a peripheral, in computer terms?",
-      "choices": [
-        {
-          "choice1": "Keyboard",
-          "choice2": "Mouse",
-          "choice3": "Motherboard"
-        }
-      ]
+      "choices": {
+        "choice1": "Keyboard",
+        "choice2": "Mouse",
+        "choice3": "Motherboard"
+      },
+      "answser": "Motherboard"
     },
     {
       "id": 3,
       "question": "Which of the following is not one of the early “protocols,” or ways to use the Internet?",
-      "choices": [
-        {
-          "choice1": "Blogging",
-          "choice2": "Telnet",
-          "choice3": "FTP"
-        }
-      ]
+      "choices": {
+        "choice1": "Blogging",
+        "choice2": "Telnet",
+        "choice3": "FTP"
+      },
+      "answser": "Blogging"
     },
     {
       "id": 4,
       "question": " Which of these is not a kind of computer?",
-      "choices": [
-        {
-          "choice1": "Apple",
-          "choice2": "Toshiba",
-          "choice3": "Lada"
-        }
-      ]
+      "choices": {
+        "choice1": "Apple",
+        "choice2": "Toshiba",
+        "choice3": "Lada"
+      },
+      "answser": "Lada"
     },
     {
       "id": 5,
       "question": "Which of these products is not made by the Apple Corporation?",
-      "choices": [
-        {
-          "choice1": "IMAX",
-          "choice2": "iMac",
-          "choice3": "iPod"
-        }
-      ]
+      "choices": {
+        "choice1": "IMAX",
+        "choice2": "iMac",
+        "choice3": "iPod"
+      },
+      "answser": "IMAX"
     }
   ],
-  "seriousgame": [
+  "sourcing": [
     {
       "id": 1,
-      "case": "Marquetez un produit que vous avez créer."
-    }
-  ],
-  "motivation": [
+      "type": "seriousgame",
+      "case": "C’est simple, on vous met en situation de stress en vous posant des questions ou en glissant des allusions destinées à vous provoquer. C’est assez facile de repérer ces tests - que l’on ne vous annonce bien évidemment pas-  au travers des questions comme : « Tout à l’heure vous avez commis une erreur, ça vous arrive souvent ?» , « Nous émettons de forts doutes sur vos capacités à occuper cette fonction, pas vous ? » ou encore « Êtes-vous sûre que vous êtes faite pour ce type de poste ? ».",
+      "objective": "vous faire réagir et observer votre réaction lorsque vous êtes déstabilisé."
+    },
     {
-      "id": 1,
+      "id": 2,
+      "type": "seriousgame",
+      "case": "Vous devez répondre à une problématique en particulier, avec toute une équipe. Vous pourrez être amené à débriefer de cet exercice avec un recruteur, donc réfléchissez bien à ce que vous allez dire, attention de ne pas juger vos « adversaires » car cela peut vous porter préjudice.",
+      "objective": "évaluer votre capacité à vous distinguer, à mobiliser l’attention des autres candidats, votre manière de vous exprimer, votre charisme, votre prise de parole, votre créativité, votre capacité à négocier…"
+    },
+    {
+      "id": 3,
+      "type": "seriousgame",
+      "case": "Ce test consiste à vous mettre dans la peau d’un personnage que l’on vous attribue dans une situation donnée. Par exemple, un collaborateur lors d’un pause-café, un appel téléphonique avec un prospect, un client mécontent, annoncer ou recevoir une démission.",
+      "objective": "évaluer votre capacité à vous affirmer face aux autres, faire des concessions, négocier, vendre, écouter, argumenter et vous adapter à la situation."
+    },
+    {
+      "id": 4,
+      "type": "motivation",
       "question": "Pourquoi avez vous choisis notre école ?"
-    }
-  ],
-  "administrative": [
-    {
-      "question": "Question 1.",
-      "id": 1
     },
     {
-      "question": "Question 2.",
-      "id": 2
+      "id": 5,
+      "type": "motivation",
+      "question": "Pourquoi avez vous choisis ce domaine ?"
     },
     {
-      "question": "Question 3.",
-      "id": 3
-    }
-  ],
-  "technical": [
+      "id": 6,
+      "type": "motivation",
+      "question": "Comment vous voyez vous après la formation chez notre école ?"
+    },
     {
-      "exercise": "Créer une liste dynamique d'utilisateurs.",
-      "technology": "C",
-      "id": 1
+      "id": 7,
+      "type": "administrative",
+      "question": "Question 1."
+    },
+    {
+      "id": 8,
+      "type": "administrative",
+      "question": "Question 2."
+    },
+    {
+      "id": 9,
+      "type": "administrative",
+      "question": "Question 3."
+    },
+    {
+      "id": 10,
+      "type": "technical",
+      "exercise": "Réaliser un programme simple qui incrémente un nombre de 0 à 10 et qui affiche sa valeur à chaque incrémentation."
+    },
+    {
+      "id": 11,
+      "type": "technical",
+      "exercise": "Définissez une fonction et quel est la différence entre paramètre et argument."
+    },
+    {
+      "id": 12,
+      "type": "technical",
+      "exercise": "Quel est la définition d'une variable et quel est la différence entre une variable globale et locale."
     }
   ]
 }

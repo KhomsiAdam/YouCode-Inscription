@@ -45,7 +45,7 @@ export default class Candidate {
 
         // Get all candidates and see if candidate already exists
         const data = await fetchWithGet(`http://localhost:3000/candidate/`);
-        if (data) {
+        if (data.length > 0) {
             console.log(data);
             for (let i = 0; i < data.length; i++) {
                 if (data[i].email == this.email || data[i].cin == this.cin) {
