@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check user authenticity
     auth();
 
-    // Hndling the sign up / register
+    // Handling the sign up / register
     const lastname = document.getElementById('lastname');
     const firstname = document.getElementById('firstname');
     const email = document.getElementById('email');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Create candidate
             let candidate = new Candidate();
-            candidate.signUp(lastname.value, firstname.value, email.value, cin.value, phone.value, city.value)
+            candidate.signUp(lastname.value, firstname.value, email.value, cin.value, phone.value, city.value);
         }
     })
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Sign in the candidate to pass the online test
             let candidate = new Candidate();
-            candidate.signIn(username.value, password.value)
+            candidate.signIn(username.value, password.value);
         }
     })
 })

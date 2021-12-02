@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Description -->
-    <title>YouCode Online Test</title>
-    <meta name="description" content="Test en ligne après inscription à YouCode">
+    <title>YouCode Staff Login</title>
+    <meta name="description" content="YouCode platforme de connection de l'administration">
 
     <!-- Google Fonts Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,7 +22,16 @@
 </head>
 
 <body>
-    <h1>Test en ligne.</h1>
+    <h1>Staff login.</h1>
+    <form id="sign-in" class="form ss-container">
+        <label for="username" class="form__label">Identifiant</label>
+        <input type="text" name="username" id="username" class="form__input ss-shadow-2">
+        
+        <label for="password" class="form__label">Mot de passe</label>
+        <input type="password" name="password" id="password" class="form__input ss-shadow-2">
+        
+        <button type="submit" id="sign-in-button" class="form__button">Se connecter</button>
+    </form>
 </body>
 
 </html>

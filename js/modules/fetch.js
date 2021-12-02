@@ -16,7 +16,7 @@ export const fetchWithData = async (method, endpoint, body) => {
     const data = await response.json();
     return data;
 }
-// FEtch function for GET
+// Fetch function for GET
 export const fetchWithGet = async (endpoint) => {
     const response = await fetch(endpoint, {
         method: 'GET',
