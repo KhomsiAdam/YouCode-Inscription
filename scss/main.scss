@@ -6,9 +6,61 @@
 @use "components" as *;
 // Layouts
 @use "layouts" as *;
-// pages
+// Pages
 @use "pages" as *;
 
 /* ======== */
 /* Main CSS */
 /* ======== */
+.main {
+    height: 100%;
+    position: relative;
+    top: 70px;
+    padding: 4em 20px 0 20px;
+    background: ss-var($colors, "neutral", "lightgray");
+    @include breakpoint-min(ss-var($breakpoints, "1024")) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        font-weight: ss-var($font-weight, "medium");
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        width: 330px;
+        @include breakpoint-max(ss-var($breakpoints, "360")) {
+            width: 280px;
+        }
+        @include breakpoint-min(ss-var($breakpoints, "1280")) {
+            width: 610px;
+        }
+        &:before {
+            content: "";
+            bottom: 35%;
+            left: 5%;
+            border-top: 7px solid ss-var($colors, "primary", "blue");
+            border-left: 7px solid ss-var($colors, "primary", "blue");
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+        &:after {
+            content: "";
+            top: 35%;
+            right: 5%;
+            border-bottom: 7px solid ss-var($colors, "primary", "blue");
+            border-right: 7px solid ss-var($colors, "primary", "blue");
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+.hidden {
+    display: none;
+}
+.material-icons.hidden {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}

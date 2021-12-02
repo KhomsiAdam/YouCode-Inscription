@@ -59,6 +59,7 @@
 .#{$prefix}grid-center {
     display: grid;
     place-content: center;
+    place-items: center;
 }
 
 /* To round elements as a circle */

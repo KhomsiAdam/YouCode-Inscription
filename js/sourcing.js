@@ -3,11 +3,13 @@ import Candidate from './classes/Candidate.js';
 import Sourcing from './classes/Sourcing.js';
 // Import Modules
 import { auth } from './modules/auth.js';
+import { loading } from './modules/loading.js';
 
 // Any code that needs to run after the document loads
 document.addEventListener('DOMContentLoaded', () => {
     // Check user authenticity
     auth();
+    loading();
 
     let sourcing = new Sourcing();
     sourcing.getCase();

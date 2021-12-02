@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title & Description -->
+    <title>YouCode Inscriptions</title>
+    <meta name="description" content="Platforme pour s'inscrire à YouCode">
+
+    <!-- Google Fonts Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JS -->
+    <script src="js/register.js" type="module" defer></script>
+
+</head>
+
+<body>
+    <header class="header auth loading">
+        <a href="/" class="header__logo">
+            <img class="header__image" src="images/logo.png" alt="YouCode logo">
+        </a>
+    </header>
+    <main class="main loading">
+        <h1 class="main__title ss-grid-center">Inscription</h1>
+        <form id="sign-up" class="form">
+            <label for="firstname" class="form__label">Prénom</label>
+            <input type="text" name="firstname" id="firstname" class="form__input ss-shadow-2">
+
+            <label for="lastname" class="form__label">Nom</label>
+            <input type="text" name="lastname" id="lastname" class="form__input ss-shadow-2">
+
+            <label for="email" class="form__label">Email</label>
+            <input type="email" name="email" id="email" class="form__input ss-shadow-2">
+
+            <label for="cin" class="form__label">CIN</label>
+            <input type="text" name="cin" id="cin" class="form__input ss-shadow-2">
+
+            <label for="phone" class="form__label">Téléphone</label>
+            <input type="tel" name="phone" id="phone" class="form__input ss-shadow-2">
+
+            <label for="city" class="form__label">Ville</label>
+            <input type="text" name="city" id="city" class="form__input ss-shadow-2">
+
+            <p id="sign-up-error" class="input-error ss-align-center"></p>
+            <button type="submit" id="sign-up-button" class="form__button ss-shadow-2">S'inscrire</button>
+            <p class="form__sign ss-grid-center ss-container">Vous êtes déjà inscrit ? <span class="form__sign__link" id="login">Connectez-vous</span></p>
+        </form>
+        <form id="sign-in" class="form hidden">
+            <label for="username" class="form__label">Identifiant</label>
+            <input type="text" name="username" id="username" class="form__input ss-shadow-2">
+
+            <label for="password" class="form__label">Mot de passe</label>
+            <div class="password-container">
+                <input type="password" name="password" id="password" class="form__input ss-shadow-2">
+                <span class="material-icons hidden" id="password-eyecon">visibility_off</span>
+            </div>
+
+            <p id="sign-in-error" class="input-error ss-align-center"></p>
+            <button type="submit" id="sign-in-button" class="form__button ss-shadow-2">Se connecter</button>
+            <p class="form__sign ss-grid-center ss-container">Vous n'avez pas de compte? <span class="form__sign__link" id="register">Inscrivez vous</span></p>
+        </form>
+    </main>
+    <footer class="footer ss-grid-center loading">
+        <p class="footer__copyright">YouCode © 2021</p>
+    </footer>
+</body>
+
+</html>

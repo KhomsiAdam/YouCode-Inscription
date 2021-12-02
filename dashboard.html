@@ -22,8 +22,32 @@
 </head>
 
 <body>
-    <h1>Dashboard.</h1>
-    <button class="button" id="logout">Logout</button>
+    <header class="header loading">
+        <a href="/" class="header__logo">
+            <img class="header__image" src="images/logo.png" alt="YouCode logo">
+        </a>
+        <nav class="header__nav">
+            <a class="header__nav__link ss-grid-center" id="logout">Déconnexion</a>
+        </nav>
+    </header>
+    <main class="main overflow loading">
+        <h1 class="main__title ss-grid-center">Dashboard</h1>
+        <div class="scroll">
+            <div class="candidates">
+                <div class="candidates__headers">
+                    <div class="candidates__headers__col">Nom</div>
+                    <div class="candidates__headers__col">Email</div>
+                    <div class="candidates__headers__col">CIN</div>
+                    <div class="candidates__headers__col">Date d'inscription</div>
+                    <div class="candidates__headers__col">Status</div>
+                    <div class="candidates__headers__col">Résultats</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer ss-grid-center loading">
+        <p class="footer__copyright">YouCode © 2021</p>
+    </footer>
 </body>
 
 </html>

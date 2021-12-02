@@ -2,3 +2,13 @@
 @use '../abstracts' as *;
 
 /* Footer */
+.footer {
+    width: 100%;
+    height: 70px;
+    margin-top: 70px;
+    background: ss-var($colors, "neutral", "darkgray");
+    &__copyright {
+        color: ss-var($colors, "neutral", "white");
+        font-weight: ss-var($font-weight, "medium");
+    }
+}

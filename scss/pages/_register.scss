@@ -1,0 +1,32 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ============ */
+/* Register CSS */
+/* ============ */
+
+#sign-in {
+    height: 100vh;
+    @include breakpoint-min(ss-var($breakpoints, "1024")) {
+        height: calc(100vh - 229px);
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        width: 500px;
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1440")) {
+        height: calc(100vh - 234px);
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1920")) {
+        height: calc(100vh - 238px);
+    }
+}
+#sign-up {
+    height: 100%;
+    @include breakpoint-min(ss-var($breakpoints, "1024")) {
+        height: calc(100vh - 229px);
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        height: 100%;
+        width: 500px;
+    }
+}

@@ -90,21 +90,19 @@ export default class Candidate {
         // Get the candidate by it's username
         const data = await fetchWithGet(`http://localhost:3000/candidate/?username=${this.username}`);
         if (data.length > 0) {
-            console.log(data);
-            console.log('fetched password: ' + data[0].password);
-            console.log('input password: ' + this.password);
             // Compare the password entered by the candidate's password
             if (data[0].password == this.password) {
-                console.log("Correct password");
                 // Store the CIN in localstorage
                 localStorage.setItem("CIN", data[0].cin);
                 // Redirect to the online test page
                 location.replace('/onlinetest.html');
             } else {
-                console.log("Incorrect password");
+                document.getElementById('sign-in-error').innerHTML = 'Mot de passe incorrect.';
+                document.getElementById('password').classList.add('error');
             }
         } else {
-            console.log("Incorrect username");
+            document.getElementById('sign-in-error').innerHTML = 'Identifiant incorrect.';
+            document.getElementById('username').classList.add('error');
         }
     }
 
@@ -119,14 +117,84 @@ export default class Candidate {
                 // When the candidate tries to navigate to other pages than the online test while his status is 'Neutral'
                 if (data[0].status == 'Neutral' && window.location.pathname !== '/onlinetest.html') {
                     location.replace('/onlinetest.html');
-                // When the candidate tries to navigate to other pages than the sourcing while his status is 'Accepted'
+                    // When the candidate tries to navigate to other pages than the sourcing while his status is 'Accepted'
                 } else if (data[0].status == 'Accepted' && window.location.pathname !== '/sourcing.html') {
                     location.replace('/sourcing.html');
                 }
-            // If no candidate found with the CIN provided remove it from localstorage and redirect to homepage
+                // If no candidate found with the CIN provided remove it from localstorage and redirect to homepage
             } else if (data.length === 0) {
                 localStorage.removeItem('CIN');
                 location.replace('/');
+            }
+        }
+    }
+
+    // Get all candidates
+    async getAll() {
+        const data = await fetchWithGet(`http://localhost:3000/candidate/`);
+        if (data.length > 0) {
+            console.log(data);
+            for (let i = 0; i < data.length; i++) {
+                let name = document.createElement('div');
+                name.setAttribute('class', 'candidates__element__col');
+                name.innerHTML = data[i].firstname + ' ' + data[i].lastname;
+
+                let email = document.createElement('div');
+                email.setAttribute('class', 'candidates__element__col');
+                email.innerHTML = data[i].email;
+
+                let cin = document.createElement('div');
+                cin.setAttribute('class', 'candidates__element__col');
+                cin.innerHTML = data[i].cin;
+
+                let created_at = document.createElement('div');
+                created_at.setAttribute('class', 'candidates__element__col');
+                created_at.innerHTML = data[i].created_at;
+
+                let status;
+                if (data[i].status === 'Accepted') {
+                    status = document.createElement('div');
+                    status.setAttribute('class', 'candidates__element__col accepted');
+                    status.innerHTML = data[i].status;
+                } else if (data[i].status === 'Rejected') {
+                    status = document.createElement('div');
+                    status.setAttribute('class', 'candidates__element__col rejected');
+                    status.innerHTML = data[i].status;
+                } else if (data[i].status === 'Pending') {
+                    status = document.createElement('div');
+                    status.setAttribute('class', 'candidates__element__col pending');
+                    status.innerHTML = data[i].status;
+                }
+
+                let file;
+                if (data[i].status === 'Accepted') {
+                    let accepted = document.createElement('div');
+                    accepted.setAttribute('class', 'candidates__element__col');
+                    accepted.innerHTML = '<span class="material-icons accepted">file_download</span>';
+                    file = accepted;
+                } else if (data[i].status === 'Rejected') {
+                    let rejected = document.createElement('div');
+                    rejected.setAttribute('class', 'candidates__element__col');
+                    rejected.innerHTML = '<span class="material-icons rejected">file_download_off</span>';
+                    file = rejected;
+                } else if (data[i].status === 'Pending') {
+                    let pending = document.createElement('div');
+                    pending.setAttribute('class', 'candidates__element__col');
+                    pending.innerHTML = '<span class="material-icons pending">pending</span>';
+                    file = pending;
+                }
+
+                let element = document.createElement('div');
+                element.setAttribute('class', 'candidates__element');
+
+                document.querySelector('.candidates').appendChild(element);
+
+                element.appendChild(name);
+                element.appendChild(email);
+                element.appendChild(cin);
+                element.appendChild(created_at);
+                element.appendChild(status);
+                element.appendChild(file);
             }
         }
     }
