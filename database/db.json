@@ -1,63 +1,139 @@
 {
   "candidate": [
-  ],
-  "onlinetest": [
     {
-      "id": 1,
-      "question": "Who founded Apple Computer?",
-      "choices": [
-        {
-          "choice1": "Stephen Fry",
-          "choice2": "Bill Gates",
-          "choice3": "Steve Jobs"
-        }
-      ]
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdi@gmail",
+      "cin": "HH28550",
+      "phone": "0690904390",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "elmahdijhon",
+      "password": "test123",
+      "id": 1
     },
     {
-      "id": 2,
-      "question": "Which of these is not a peripheral, in computer terms?",
-      "choices": [
-        {
-          "choice1": "Keyboard",
-          "choice2": "Mouse",
-          "choice3": "Motherboard"
-        }
-      ]
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "elmahdi.rammach@gmail.com",
+      "cin": "HH2855011",
+      "phone": "0656710714",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "elmahdijhon",
+      "password": "test123",
+      "id": 2
     },
     {
-      "id": 3,
-      "question": "Which of the following is not one of the early “protocols,” or ways to use the Internet?",
-      "choices": [
-        {
-          "choice1": "Blogging",
-          "choice2": "Telnet",
-          "choice3": "FTP"
-        }
-      ]
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdi@gmail.com",
+      "cin": "HH16275311",
+      "phone": "0621065107",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "elmahdijhon",
+      "password": "test123",
+      "id": 3
     },
     {
-      "id": 4,
-      "question": " Which of these is not a kind of computer?",
-      "choices": [
-        {
-          "choice1": "Apple",
-          "choice2": "Toshiba",
-          "choice3": "Lada"
-        }
-      ]
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdiA@gmail.com",
+      "cin": "HH285501",
+      "phone": "+212669532220",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "elmahdijhon",
+      "password": "",
+      "id": 4
     },
     {
-      "id": 5,
-      "question": "Which of these products is not made by the Apple Corporation?",
-      "choices": [
-        {
-          "choice1": "IMAX",
-          "choice2": "iMac",
-          "choice3": "iPod"
-        }
-      ]
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdiqs@gmail.com",
+      "cin": "HH28550a",
+      "phone": "0656710714",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "mahdiqs",
+      "password": "",
+      "id": 5
+    },
+    {
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdiQW@gmail.com",
+      "cin": "HH28550Q",
+      "phone": "0621065107",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "mahdiQW",
+      "password": "ZzaJ9FXv",
+      "id": 6
+    },
+    {
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdi11@gmail.com",
+      "cin": "HH28550111",
+      "phone": "0656710714",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "mahdi11",
+      "password": "ooQL93Tu",
+      "id": 7
     }
   ],
+  "onlinetest" : [
+  {
+    "title": " Trouvez le nombre suivant dans cette suite logique de nombres :2 4 7 11 16.",
+    "answer_1": "22",
+    "answer_2": "23",
+    "answer_3": "24",
+    "answer_4": "25",
+    "right_answer": "22"
+  },
+  {
+    "title": "Quelle est la valeur de X ? 4 * 3 * 0 * 100 * 0.1 = X",
+    "answer_1": "145",
+    "answer_2": "0",
+    "answer_3": "11",
+    "answer_4": "23",
+    "right_answer": "0"
+  },
+  {
+    "title": "Complétez cette suite : 2 - 12 - 30 - 56 - ? - 132",
+    "answer_1": "99",
+    "answer_2": "34",
+    "answer_3": "30",
+    "answer_4": "94",
+    "right_answer": "94"
+  },
+  {
+    "title": " Si 2 # 3 = 36, et 10 # 4 = 1600, combien pourraient faire 2 # 4 ?",
+    "answer_1": "324",
+    "answer_2": "126",
+    "answer_3": "416",
+    "answer_4": "23",
+    "right_answer": "416"
+  },
+  {
+    "title": " Qui manque à cet alphabet tronqué : b, c, d, g, t, v, w",
+    "answer_1": "J",
+    "answer_2": "B",
+    "answer_3": "A",
+    "answer_4": "S",
+    "right_answer": "S"
+  }
+],
   "seriousgame": [
     {
       "id": 1,
