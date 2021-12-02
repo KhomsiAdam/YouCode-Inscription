@@ -5,6 +5,8 @@
 /* Resets */
 /* ====== */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 html {
     box-sizing: border-box;
     /* Font family */
@@ -13,20 +15,20 @@ html {
     font-size: 62.5%;
     /* Scrollbar Styling : Firefox */
     scrollbar-width: thin;
-    scrollbar-color: ss-var($colors, "neutral", "black") ss-var($colors, "neutral", "white");
+    scrollbar-color: ss-var($colors, "primary", "blue") ss-var($colors, "neutral", "darkgray");
     /* Scrollbar Styling for Webkit browsers */
     &::-webkit-scrollbar {
         width: 1.5rem;
     }
     &::-webkit-scrollbar-track {
-        background: ss-var($colors, "neutral", "black");
+        background: ss-var($colors, "neutral", "darkgray");
     }
     &::-webkit-scrollbar-thumb {
-        background: ss-var($colors, "neutral", "gray");
+        background: ss-var($colors, "neutral", "white");
         border-radius: 3px;
     }
     &::-webkit-scrollbar-thumb:hover {
-        background: ss-var($colors, "neutral", "white");
+        background: ss-var($colors, "primary", "blue");
     }
 }
 
@@ -63,6 +65,10 @@ body {
     min-height: 100vh;
     // text-rendering: optimizeSpeed;
     // line-height: 1.5;
+}
+.loading {
+    opacity: 0;
+    visibility: hidden;
 }
 
 img,

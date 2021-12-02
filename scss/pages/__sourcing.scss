@@ -1,0 +1,20 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ============ */
+/* Sourcing CSS */
+/* ============ */
+
+section {
+    margin: 0 auto;
+    width: 320px;
+    @include breakpoint-max(ss-var($breakpoints, "360")) {
+        width: 280px;
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        width: 550px;
+    }
+    form {
+        width: 100%;
+    }
+}

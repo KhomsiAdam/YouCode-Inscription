@@ -6,7 +6,7 @@ $prefix: "ss-";
 // ========= //
 // Font name //
 // ========= //
-$font-name: "Verdana";
+$font-name: "Montserrat";
 $font-serif: "sans-serif";
 // ============ //
 // Font weights //
@@ -29,14 +29,13 @@ $colors: (
     // Main colors
     primary:
         (
-            "green": #008f70,
-            "blue": #2b777d,
+            "blue": #058dfe,
         ),
     // Secondary colors
     secondary:
         (
-            "lightgreen": #5fbe6e,
-            "darkblue": #2b365a,
+            "green": #008f70,
+            "darkblue": #54679e,
             "lightblue": #5fbebc,
             "yellow": #bebe5f,
             "red": #c94242,

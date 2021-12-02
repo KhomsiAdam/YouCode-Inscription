@@ -22,16 +22,31 @@
 </head>
 
 <body>
-    <h1>Staff login.</h1>
-    <form id="sign-in" class="form ss-container">
-        <label for="username" class="form__label">Identifiant</label>
-        <input type="text" name="username" id="username" class="form__input ss-shadow-2">
-        
-        <label for="password" class="form__label">Mot de passe</label>
-        <input type="password" name="password" id="password" class="form__input ss-shadow-2">
-        
-        <button type="submit" id="sign-in-button" class="form__button">Se connecter</button>
-    </form>
+    <header class="header auth loading">
+        <a href="/" class="header__logo">
+            <img class="header__image" src="images/logo.png" alt="YouCode logo">
+        </a>
+    </header>
+    <main class="main loading">
+        <h1 class="main__title ss-grid-center">Staff</h1>
+        <form id="sign-in" class="form">
+
+            <label for="username" class="form__label">Identifiant</label>
+            <input type="text" name="username" id="username" class="form__input ss-shadow-2">
+
+            <label for="password" class="form__label">Mot de passe</label>
+            <div class="password-container">
+                <input type="password" name="password" id="password" class="form__input ss-shadow-2">
+                <span class="material-icons hidden" id="password-eyecon">visibility_off</span>
+            </div>
+
+            <p id="sign-in-error" class="input-error ss-align-center"></p>
+            <button type="submit" id="sign-in-button" class="form__button ss-shadow-2">Se connecter</button>
+        </form>
+    </main>
+    <footer class="footer ss-grid-center loading">
+        <p class="footer__copyright">YouCode © 2021</p>
+    </footer>
 </body>
 
 </html>

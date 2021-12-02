@@ -1,0 +1,91 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ============= */
+/* Dashboard CSS */
+/* ============= */
+
+.overflow {
+    overflow: hidden;
+}
+.scroll {
+    overflow-x: auto;
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        overflow-x: unset;
+        width: 100%;
+    }
+}
+.candidates {
+    width: 1000px;
+    height: calc(100vh - 219px);
+    padding: 4em 0;
+    @include breakpoint-max(ss-var($breakpoints, "360")) {
+        height: calc(100vh - 217px);
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        height: calc(100vh - 229px);
+        padding: 4em;
+        width: 100%;
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1440")) {
+        height: calc(100vh - 234px);
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1920")) {
+        height: calc(100vh - 238px);
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    &__headers {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: ss-var($font-weight, "bold");
+        &__col {
+            flex-basis: 16.66%;
+        }
+    }
+    &__element {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: ss-var($font-weight, "medium");
+        .accepted {
+            color: ss-var($colors, "secondary", "green");
+            font-weight: ss-var($font-weight, "bold");
+        }
+        .rejected {
+            color: ss-var($colors, "secondary", "red");
+            font-weight: ss-var($font-weight, "bold");
+        }
+        .pending {
+            color: ss-var($colors, "secondary", "yellow");
+            font-weight: ss-var($font-weight, "bold");
+        }
+        &__col {
+            flex-basis: 16.66%;
+            .accepted {
+                background: ss-var($colors, "secondary", "green");
+                padding: 5px;
+                border-radius: 10px;
+                color: ss-var($colors, "neutral", "white");
+                cursor: pointer;
+            }
+            .rejected {
+                background: ss-var($colors, "secondary", "red");
+                padding: 5px;
+                border-radius: 10px;
+                color: ss-var($colors, "neutral", "white");
+                cursor: not-allowed;
+            }
+            .pending {
+                background: ss-var($colors, "secondary", "yellow");
+                padding: 5px;
+                border-radius: 10px;
+                color: ss-var($colors, "neutral", "white");
+                cursor: unset;
+            }
+        }
+    }
+}

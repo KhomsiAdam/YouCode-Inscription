@@ -1,30 +1,129 @@
 // Abstracts
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 /* Forms */
 .form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto;
+    place-content: center;
+    // flex-direction: column;
     font-size: 1.6rem;
     gap: 1em;
     padding-block: 2em;
+    @include breakpoint-min(ss-var($breakpoints, "1024")) {
+        justify-content: center;
+    }
+    &__title {
+        font-weight: ss-var($font-weight, "semibold");
+        color: ss-var($colors, "neutral", "darkgray");
+        position: relative;
+        margin-bottom: 1em;
+        width: fit-content;
+        &:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background: ss-var($colors, "primary", "blue");
+            width: 100%;
+            bottom: -10px;
+            left: 0;
+        }
+    }
+    &__label {
+        font-weight: ss-var($font-weight, "medium");
+    }
     &__input {
         height: 50px;
-        width: 100%;
-        border: 1px solid black;
+        width: 320px;
+        @include breakpoint-max(ss-var($breakpoints, "360")) {
+            width: 280px;
+        }
+        @include breakpoint-min(ss-var($breakpoints, "1280")) {
+            width: 550px;
+        }
         border-radius: 5px;
         padding: 0 1em;
+        &:focus {
+            outline: 2px solid ss-var($colors, "primary", "blue");
+        }
+    }
+    &__input.error {
+        outline: 2px solid ss-var($colors, "secondary", "red");
+    }
+    .password-container {
+        position: relative;
+        #password-eyecon {
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            height: 50px;
+            width: 50px;
+            display: grid;
+            place-content: center;
+            font-size: 3rem;
+            transform: translate(0, -50%);
+            color: ss-var($colors, "neutral", "darkgray");
+            @include breakpoint-min(ss-var($breakpoints, "1280")) {
+                cursor: pointer;
+                transition: 0.3s linear;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
     }
     &__button {
         height: 50px;
         width: 100%;
         border-radius: 5px;
+        color: ss-var($colors, "neutral", "white");
+        background: ss-var($colors, "primary", "blue");
+        font-weight: ss-var($font-weight, "medium");
+        margin-block: 1em 2em;
+        &:focus {
+            outline: 2px solid ss-var($colors, "neutral", "darkgray");
+        }
+        @include breakpoint-min(ss-var($breakpoints, "1280")) {
+            cursor: pointer;
+        }
     }
     &__textarea {
-        width: 100%;
-        border: 1px solid black;
         border-radius: 5px;
         padding: 1em;
         resize: none;
+        width: 320px;
+        @include breakpoint-max(ss-var($breakpoints, "360")) {
+            width: 280px;
+        }
+        @include breakpoint-min(ss-var($breakpoints, "1280")) {
+            width: 550px;
+        }
+        &:focus {
+            outline: 2px solid ss-var($colors, "primary", "blue");
+        }
     }
+    &__textarea.error {
+        outline: 2px solid ss-var($colors, "secondary", "red");
+    }
+    &__sign {
+        font-weight: ss-var($font-weight, "medium");
+        width: 80%;
+        line-height: 1.6;
+        &__link {
+            color: ss-var($colors, "primary", "blue");
+            font-weight: ss-var($font-weight, "semibold");
+            @include breakpoint-min(ss-var($breakpoints, "1280")) {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.input-error {
+    color: ss-var($colors, "secondary", "red");
+    font-weight: ss-var($font-weight, "semibold");
+    margin-top: 1em;
 }

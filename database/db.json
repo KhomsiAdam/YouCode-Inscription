@@ -12,6 +12,32 @@
       "created_at": "2021-11-30",
       "username": "johndoe",
       "password": "test123"
+    },
+    {
+      "id": 2,
+      "lastname": "doe",
+      "firstname": "jane",
+      "email": "johndoe@email.com",
+      "cin": "A223344",
+      "phone": "123456789",
+      "city": "Safi",
+      "status": "Accepted",
+      "created_at": "2021-11-30",
+      "username": "janedoe",
+      "password": "test123"
+    },
+    {
+      "id": 3,
+      "lastname": "doe",
+      "firstname": "alex",
+      "email": "johndoe@email.com",
+      "cin": "A556677",
+      "phone": "123456789",
+      "city": "Safi",
+      "status": "Rejected",
+      "created_at": "2021-11-30",
+      "username": "alexdoe",
+      "password": "test123"
     }
   ],
   "staff": [

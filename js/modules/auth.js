@@ -3,7 +3,7 @@ import Staff from '../classes/Staff.js';
 // Check if user is logged in by checking the CIN and redirect to homepage if it doesn't exist or it isn't valid
 export function auth() {
 
-    const routes = ['/', '/index.html', '/onlinetest.html', '/sourcing.html', '/admin.html', '/dashboard.html']
+    const routes = ['/', '/index.html', '/register.html', '/onlinetest.html', '/sourcing.html', '/admin.html', '/dashboard.html']
 
     switch (window.location.pathname) {
         // Candidate platform
@@ -11,6 +11,9 @@ export function auth() {
             routingCandidate();
             break;
         case '/index.html':
+            routingCandidate();
+            break;
+        case '/register.html':
             routingCandidate();
             break;
         case '/onlinetest.html':
@@ -38,7 +41,7 @@ function routingCandidate(redirect = false) {
         let staff = new Staff();
         staff.getByUCODE();
     } else {
-        if (redirect === true) location.replace('/')
+        if (redirect === true) location.replace('/register.html')
     }
 }
 
