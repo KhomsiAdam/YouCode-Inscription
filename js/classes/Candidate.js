@@ -16,6 +16,26 @@ export default class Candidate {
     password;
     duplicate = false;
 
+    //methods generate Password and login with
+    generatePassword() {
+        var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        var length = 8 ;
+        var retVal = "";
+        for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+        console.log(retVal);
+        return retVal;
+        
+    }
+    generateLogin(email) {
+        let login = email;
+        login = login.replace('.', "");
+        login = login.substring(0, login.lastIndexOf('@') + 0);
+        localStorage.setItem('login', login);
+        console.log(login);
+        return login;
+    }
     // Register
     async signUp(lastname, firstname, email, cin, phone, city) {
         // Assign values to the parameters
@@ -25,7 +45,6 @@ export default class Candidate {
         this.cin = cin;
         this.phone = phone;
         this.city = city;
-
         // Init duplicate status
         this.duplicate = false;
 
@@ -39,8 +58,8 @@ export default class Candidate {
             "city": this.city,
             "status": "Neutral",
             "created_at": "2021-11-30",
-            "username": this.firstname + this.lastname,
-            "password": "test123"
+            "username": this.generateLogin(this.email),
+            "password": this.generatePassword(),
         }
 
         // Get all candidates and see if candidate already exists
