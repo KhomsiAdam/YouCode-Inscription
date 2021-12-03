@@ -65,4 +65,55 @@ export default class Staff {
         localStorage.removeItem('UCODE');
         location.replace('/admin.html');
     }
+
+    async getdataResult(cin) {
+        this.cin = cin;
+        const data = await fetchWithGet(`http://localhost:3000/result/?cin=${this.cin}`);
+        let type;
+        const result = `
+    DATE           : ${data[0].created_at}    
+    FULL NAME      : ${data[0].name}
+    CIN            : ${data[0].cin}
+    
+                        
+                       SOURCING
+
+        
+    SERIOUS GAME   : ==================================================
+
+        QUESTION   : ${data[0].seriousgame.question}
+        ANSWER     : ${data[0].seriousgame.answer}
+    
+    MOTIVATION TEST : ==================================================
+    
+          QUESTION  : ${data[0].motivation.question}
+          ANSWER    : ${data[0].motivation.answer}
+
+    ADMINISTRATIVE TEST  : ==================================================
+
+          QUESTION 1 :${data[0].administrative.question1}
+          ANSWER     :${data[0].administrative.answer1}
+          QUESTION 2 :${data[0].administrative.question2}
+          ANSWER     :${data[0].administrative.answer2}
+          QUESTION 3 :${data[0].administrative.question3}
+          ANSWER     :${data[0].administrative.answer3}
+
+    TECHNICAL TEST  : ==================================================
+
+          QUETION : ${data[0].technical.question}
+          ANSWER  : ${data[0].technical.answer}
+
+        ==================================================
+                            YOUCODE   
+        ==================================================
+    `;
+            var file = new Blob([result], [type = "text"]);
+            var anchor = document.createElement("a");
+           anchor.href = URL.createObjectURL(file);
+           anchor.download = "data.txt";
+           anchor.click();
+        console.log(datastring);
+        return data;
+
+    }
 }

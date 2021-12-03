@@ -47,6 +47,20 @@ export default class Candidate {
         this.city = city;
         // Init duplicate status
         this.duplicate = false;
+        let created_at = new Date().toISOString().slice(0, 10);
+        // Generate the fetch body data
+        let body = {
+            "lastname": this.lastname,
+            "firstname": this.firstname,
+            "email": this.email,
+            "cin": this.cin,
+            "phone": this.phone,
+            "city": this.city,
+            "status": "Pending",
+            "created_at": created_at,
+            "username": this.generateLogin(this.email),
+            "password": this.generatePassword(),
+        }
 
         // Get all candidates and see if candidate already exists
         const data = await fetchWithGet(`http://localhost:3000/candidate/`);

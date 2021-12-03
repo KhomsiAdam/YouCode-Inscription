@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     auth();
     loading();
 
+    //export file txt 
+    document.getElementById('download').addEventListener('click', (e) => {
+        e.preventDefault();
+        let cin = "A878787";
+        let dataCandidat = new Staff();
+        dataCandidat.getdataResult(cin);
+       
+    });
     document.getElementById('logout').addEventListener('click', () => {
         let staff = new Staff();
         staff.logout()

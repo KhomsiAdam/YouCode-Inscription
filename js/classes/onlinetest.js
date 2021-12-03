@@ -142,6 +142,15 @@ export default class Onlinetest {
                 // Add The Text To Label
                 theLabel.appendChild(theLabelText);
 
+
+      // Create Radio Input
+      let radioInput = document.createElement("input");
+      // Add Type + Name + Id + Data-Attribute
+      radioInput.name = "question";
+      radioInput.type = "radio";
+      radioInput.id = `answer_${i}`;
+      radioInput.dataset.answer = obj[`answer_${i}`];
+              
                 // Add Input + Label To Main Div
                 mainDiv.appendChild(radioInput);
                 mainDiv.appendChild(theLabel);
@@ -237,25 +246,6 @@ export default class Onlinetest {
             }, 5000);
         }
     }
-
-
-
-
-    //     let quiz = document.querySelector(".quiz");
-    //     if (data.length > 0) {
-    //         console.log(data);
-    //         for (let i = 0; i < data.length; i++) {
-    //             quiz.innerHTML +=`
-    // <h4 class="quiz-question">Q${data[i].id}: ${data[i].question}</h4>
-    // <ul data-quiz-question="${data[i].id}">
-    //   <li class="quiz-answer" data-quiz-answer="a">a. ${data[i].choices.choice1}</li>
-    //   <li class="quiz-answer" data-quiz-answer="b">b. ${data[i].choices.choice2}</li>
-    //   <li class="quiz-answer" data-quiz-answer="c">c. ${data[i].choices.choice3}</li>
-    //   <li class="quiz-answer" data-quiz-answer="d">d. ${data[i].choices.choice4}</li>
-    // </ul>`;
-
-    //         }
-    //     } 
 }
 
 
