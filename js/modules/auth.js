@@ -15,6 +15,23 @@ export function auth() {
             break;
         case '/register.html':
             routingCandidate();
+            if (localStorage.getItem('password') && localStorage.getItem('username')) {
+                const inputs = document.getElementById('sign-in').getElementsByTagName('input');
+                for (let i = 0; i < inputs.length; i++) {
+                    inputs[i].classList.remove('error');
+                    inputs[i].value = '';
+                }
+                document.querySelector('.material-icons').classList.remove('hidden');
+                document.getElementById('sign-up-error').innerHTML = '';
+                document.getElementById('sign-in').classList.remove('hidden');
+                document.getElementById('sign-up').classList.add('hidden');
+                document.querySelector('.main__title').innerHTML = "Connexion";
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+
+                document.getElementById('username').value = localStorage.getItem('username');
+                document.getElementById('password').value = localStorage.getItem('password');
+            }
             break;
         case '/onlinetest.html':
             routingCandidate(true);

@@ -1,95 +1,128 @@
-body {
-    margin: 0;
-    padding: 20px;
-}
+// Abstracts
+@use "../abstracts" as *;
 
-.quiz {
-    padding: 0 30px 20px 30px;
-    max-width: 960px;
-    margin: 0 auto;
+/* ============== */
+/* Testonline CSS */
+/* ============== */
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+.quiz-app {
+    // height: 100%;
+    height: calc(100vh - 259px);
+    width: 100%;
+    @include breakpoint-min(ss-var($breakpoints, "1024")) {
+        width: 70%;
+        height: calc(100vh - 269px);
+    }
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        width: 550px;
+        height: calc(100vh - 180px);
     }
 }
 
-.quiz-question {
-    font-weight: bold;
-    display: block;
-    padding: 30px 0 10px 0;
+.quiz-app {
+    // margin: 20px auto;
+    // width: 800px;
+    background-color: #f8f8f8;
+    margin-top: 4em;
+    // display: grid;
+    // justify-content: center;
+}
+.quiz-app .quiz-info {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+}
+.quiz-app .quiz-info .category {
+    flex: 1;
+}
+.quiz-app .quiz-info .count {
+    flex: 1;
+    text-align: right;
+}
+.quiz-app .quiz-area {
+    background-color: ss-var($colors, "neutral", "white");
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+}
+.quiz-app .quiz-area h2 {
     margin: 0;
 }
-
-.quiz-answer {
-    margin: 0;
-    padding: 10px;
-    background: #f7f7f7;
-    margin-bottom: 5px;
+.quiz-app .answers-area {
+    background-color: ss-var($colors, "neutral", "white");
+    padding: 0 20px 20px;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 1em;
+}
+.quiz-app .answers-area .answer {
+    background-color: ss-var($colors, "neutral", "lightgray");
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+        border-radius: 5px 5px 0 0;
+    }
+    &:last-child {
+        border-radius: 0 0 5px 5px;
+    }
+}
+.quiz-app .answers-area .answer:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+.quiz-app .answers-area .answer input[type="Radio"]:checked + label {
+    color: ss-var($colors, "primary", "blue");
+}
+.quiz-app .answers-area .answer label {
     cursor: pointer;
-
-    &:hover {
-        background: #eee;
-    }
-
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        border: 1px solid #ccc;
-        background: #fff;
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-
-    &.active {
-        &:before {
-            background-color: #333;
-            border-color: #333;
-        }
-    }
-
-    &.correct {
-        &:before {
-            background-color: green;
-            border-color: green;
-        }
-    }
-
-    &.incorrect {
-        &:before {
-            background-color: red;
-            border-color: red;
-        }
-    }
-
-    &.active.correct {
-        &:before {
-            outline: 2px solid green;
-            outline-offset: 2px;
-        }
-    }
+    font-weight: bold;
+    color: ss-var($colors, "neutral", "gray");
+    font-size: 1.6rem;
+    margin-left: 5px;
 }
 
-.quiz-result {
-    max-width: 960px;
-    margin: 0 auto;
-    font-weight: bold;
+.quiz-app .results.show {
+    height: 150px;
+    border-radius: 5px;
+    padding: 3em 3em 1em 3em;
     text-align: center;
-    color: #fff;
+    background: ss-var($colors, "neutral", "white");
+    margin-top: 1em;
+    font-size: 1.8rem;
+    font-weight: ss-var($font-weight, "medium");
+}
+.quiz-app .bullets {
+    background-color: ss-var($colors, "neutral", "white");
+    display: flex;
     padding: 20px;
-
-    &.good {
-        background: green;
-    }
-
-    &.mid {
-        background: orange;
-    }
-
-    &.bad {
-        background: red;
-    }
+    height: 80px;
+    border-radius: 5px;
+}
+.quiz-app .bullets .spans {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.quiz-app .bullets .spans span {
+    font-weight: ss-var($font-weight, "semibold");
+    color: ss-var($colors, "neutral", "darkgray");
+    width: 40px;
+    height: 40px;
+    background-color: ss-var($colors, "neutral", "lightgray");
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.quiz-app .bullets .spans span.on {
+    background-color: ss-var($colors, "primary", "blue");
+    color: ss-var($colors, "neutral", "white");
+}
+.quiz-app .results span {
+    font-weight: bold;
+}
+.quiz-app .results span.bad {
+    color: ss-var($colors, "secondary", "red");
+}
+.quiz-app .results span.good {
+    color: ss-var($colors, "primary", "blue");
+}
+.quiz-app .results span.perfect {
+    color: ss-var($colors, "secondary", "green");
 }

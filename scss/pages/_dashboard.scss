@@ -17,52 +17,64 @@
 }
 .candidates {
     width: 1000px;
-    height: calc(100vh - 219px);
+    // height: calc(100vh - 219px);
+    height: 100%;
     padding: 4em 0;
     @include breakpoint-max(ss-var($breakpoints, "360")) {
-        height: calc(100vh - 217px);
+        // height: calc(100vh - 217px);
     }
     @include breakpoint-min(ss-var($breakpoints, "1280")) {
-        height: calc(100vh - 229px);
+        // height: calc(100vh - 229px);
         padding: 4em;
         width: 100%;
     }
-    @include breakpoint-min(ss-var($breakpoints, "1440")) {
-        height: calc(100vh - 234px);
-    }
-    @include breakpoint-min(ss-var($breakpoints, "1920")) {
-        height: calc(100vh - 238px);
-    }
+    // @include breakpoint-min(ss-var($breakpoints, "1440")) {
+    //     height: calc(100vh - 234px);
+    // }
+    // @include breakpoint-min(ss-var($breakpoints, "1920")) {
+    //     height: calc(100vh - 238px);
+    // }
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    // gap: 2em;
     text-align: center;
     &__headers {
+        padding: .75em 0;
+        border-radius: 10px 10px 0 0;
+        // border: 1px solid #bdbdbd;
         display: flex;
         align-items: center;
         font-size: 1.8rem;
         font-weight: ss-var($font-weight, "bold");
+        color: ss-var($colors, "neutral", "white");
+        background: ss-var($colors, "primary", "blue");
         &__col {
             flex-basis: 16.66%;
         }
     }
     &__element {
+        padding: .75em 0;
+        border: 2px solid ss-var($colors, "primary", "blue");
+        border-top: unset;
         display: flex;
         align-items: center;
         font-size: 1.8rem;
         font-weight: ss-var($font-weight, "medium");
-        .accepted {
-            color: ss-var($colors, "secondary", "green");
-            font-weight: ss-var($font-weight, "bold");
+        &:last-child {
+            border-radius: 0 0 10px 10px;
         }
-        .rejected {
-            color: ss-var($colors, "secondary", "red");
-            font-weight: ss-var($font-weight, "bold");
-        }
-        .pending {
-            color: ss-var($colors, "secondary", "yellow");
-            font-weight: ss-var($font-weight, "bold");
-        }
+        // .accepted {
+        //     color: ss-var($colors, "secondary", "green");
+        //     font-weight: ss-var($font-weight, "bold");
+        // }
+        // .rejected {
+        //     color: ss-var($colors, "secondary", "red");
+        //     font-weight: ss-var($font-weight, "bold");
+        // }
+        // .pending {
+        //     color: ss-var($colors, "secondary", "yellow");
+        //     font-weight: ss-var($font-weight, "bold");
+        // }
         &__col {
             flex-basis: 16.66%;
             .accepted {

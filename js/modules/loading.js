@@ -3,5 +3,5 @@ export function loading() {
         document.querySelectorAll('.loading').forEach(tag => {
             tag.classList.remove('loading');
         });
-    }, 200);
+    }, 500);
 }

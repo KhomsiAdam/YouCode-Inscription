@@ -1,48 +1,75 @@
 {
   "candidate": [
+    {
+      "lastname": "Doe",
+      "firstname": "John",
+      "email": "johndoe@email.com",
+      "cin": "A998877",
+      "birthdate": "1999-01-01",
+      "phone": "123456789",
+      "city": "Safi",
+      "status": "Accepted",
+      "created_at": "2021-11-30",
+      "username": "johndoe",
+      "password": "mPS7TXpj",
+      "id": 1
+    },
+    {
+      "lastname": "test",
+      "firstname": "test",
+      "email": "test@email.com",
+      "cin": "A447788",
+      "phone": "123456789",
+      "city": "Safi",
+      "status": "Pending",
+      "created_at": "2021-11-30",
+      "username": "test",
+      "password": "W3jk558B",
+      "id": 2
+    }
   ],
-  "onlinetest" : [
-  {
-    "title": " Trouvez le nombre suivant dans cette suite logique de nombres :2 4 7 11 16.",
-    "answer_1": "22",
-    "answer_2": "23",
-    "answer_3": "24",
-    "answer_4": "25",
-    "right_answer": "22"
-  },
-  {
-    "title": "Quelle est la valeur de X ? 4 * 3 * 0 * 100 * 0.1 = X",
-    "answer_1": "145",
-    "answer_2": "0",
-    "answer_3": "11",
-    "answer_4": "23",
-    "right_answer": "0"
-  },
-  {
-    "title": "Complétez cette suite : 2 - 12 - 30 - 56 - ? - 132",
-    "answer_1": "99",
-    "answer_2": "34",
-    "answer_3": "30",
-    "answer_4": "94",
-    "right_answer": "94"
-  },
-  {
-    "title": " Si 2 # 3 = 36, et 10 # 4 = 1600, combien pourraient faire 2 # 4 ?",
-    "answer_1": "324",
-    "answer_2": "126",
-    "answer_3": "416",
-    "answer_4": "23",
-    "right_answer": "416"
-  },
-  {
-    "title": " Qui manque à cet alphabet tronqué : b, c, d, g, t, v, w",
-    "answer_1": "J",
-    "answer_2": "B",
-    "answer_3": "A",
-    "answer_4": "S",
-    "right_answer": "S"
-  }
-],
+  "onlinetest": [
+    {
+      "title": " Trouvez le nombre suivant dans cette suite logique de nombres :2 4 7 11 16.",
+      "answer_1": "22",
+      "answer_2": "23",
+      "answer_3": "24",
+      "answer_4": "25",
+      "right_answer": "22"
+    },
+    {
+      "title": "Quelle est la valeur de X ? 4 * 3 * 0 * 100 * 0.1 = X",
+      "answer_1": "145",
+      "answer_2": "0",
+      "answer_3": "11",
+      "answer_4": "23",
+      "right_answer": "0"
+    },
+    {
+      "title": "Complétez cette suite : 2 - 12 - 30 - 56 - ? - 132",
+      "answer_1": "99",
+      "answer_2": "34",
+      "answer_3": "30",
+      "answer_4": "94",
+      "right_answer": "94"
+    },
+    {
+      "title": " Si 2 # 3 = 36, et 10 # 4 = 1600, combien pourraient faire 2 # 4 ?",
+      "answer_1": "324",
+      "answer_2": "126",
+      "answer_3": "416",
+      "answer_4": "23",
+      "right_answer": "416"
+    },
+    {
+      "title": " Qui manque à cet alphabet tronqué : b, c, d, g, t, v, w",
+      "answer_1": "J",
+      "answer_2": "B",
+      "answer_3": "A",
+      "answer_4": "S",
+      "right_answer": "S"
+    }
+  ],
   "staff": [
     {
       "id": 1,
