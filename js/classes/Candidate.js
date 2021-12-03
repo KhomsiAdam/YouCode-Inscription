@@ -8,6 +8,7 @@ export default class Candidate {
     firstname;
     email;
     cin;
+    birthdate;
     phone;
     city;
     status;
@@ -19,48 +20,33 @@ export default class Candidate {
     //methods generate Password and login with
     generatePassword() {
         var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        var length = 8 ;
+        var length = 8;
         var retVal = "";
         for (var i = 0, n = charset.length; i < length; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * n));
+            retVal += charset.charAt(Math.floor(Math.random() * n));
         }
-        console.log(retVal);
+        localStorage.setItem('password', retVal)
         return retVal;
-        
     }
     generateLogin(email) {
         let login = email;
         login = login.replace('.', "");
         login = login.substring(0, login.lastIndexOf('@') + 0);
-        localStorage.setItem('login', login);
-        console.log(login);
+        localStorage.setItem('username', login);
         return login;
     }
     // Register
-    async signUp(lastname, firstname, email, cin, phone, city) {
+    async signUp(lastname, firstname, email, cin, birthdate, phone, city) {
         // Assign values to the parameters
         this.lastname = lastname;
         this.firstname = firstname;
         this.email = email;
         this.cin = cin;
+        this.birthdate = birthdate;
         this.phone = phone;
         this.city = city;
         // Init duplicate status
         this.duplicate = false;
-
-        // Generate the fetch body data
-        let body = {
-            "lastname": this.lastname,
-            "firstname": this.firstname,
-            "email": this.email,
-            "cin": this.cin,
-            "phone": this.phone,
-            "city": this.city,
-            "status": "Neutral",
-            "created_at": "2021-11-30",
-            "username": this.generateLogin(this.email),
-            "password": this.generatePassword(),
-        }
 
         // Get all candidates and see if candidate already exists
         const data = await fetchWithGet(`http://localhost:3000/candidate/`);
@@ -77,6 +63,20 @@ export default class Candidate {
 
         // Create new candidate when there isn't a duplicate
         if (this.duplicate == false) {
+            // Generate the fetch body data
+            let body = {
+                "lastname": this.lastname,
+                "firstname": this.firstname,
+                "email": this.email,
+                "cin": this.cin,
+                "phone": this.phone,
+                "city": this.city,
+                "status": "Pending",
+                "created_at": "2021-11-30",
+                "username": this.generateLogin(this.email),
+                "password": this.generatePassword(),
+            }
+
             await fetchWithData('POST', 'http://localhost:3000/candidate/', body)
         }
     }
@@ -94,6 +94,10 @@ export default class Candidate {
             if (data[0].password == this.password) {
                 // Store the CIN in localstorage
                 localStorage.setItem("CIN", data[0].cin);
+                if (localStorage.getItem('password') || localStorage.getItem('username')) {
+                    localStorage.removeItem('username');
+                    localStorage.removeItem('password');
+                }
                 // Redirect to the online test page
                 location.replace('/onlinetest.html');
             } else {
@@ -114,11 +118,15 @@ export default class Candidate {
             const data = await fetchWithGet(`http://localhost:3000/candidate/?cin=${this.cin}`);
             if (data.length > 0) {
                 console.log(data);
-                // When the candidate tries to navigate to other pages than the online test while his status is 'Neutral'
-                if (data[0].status == 'Neutral' && window.location.pathname !== '/onlinetest.html') {
+                // When the candidate tries to navigate to other pages than the online test while his status is 'Pending'
+                if (data[0].status == 'Pending' && window.location.pathname !== '/onlinetest.html') {
                     location.replace('/onlinetest.html');
                     // When the candidate tries to navigate to other pages than the sourcing while his status is 'Accepted'
                 } else if (data[0].status == 'Accepted' && window.location.pathname !== '/sourcing.html') {
+                    location.replace('/sourcing.html');
+                } else if (data[0].status == 'Rejected' && window.location.pathname !== '/onlinetest.html') {
+                    location.replace('/onlinetest.html');
+                } else if (data[0].status == 'Sourced' && window.location.pathname !== '/sourcing.html') {
                     location.replace('/sourcing.html');
                 }
                 // If no candidate found with the CIN provided remove it from localstorage and redirect to homepage
@@ -160,11 +168,12 @@ export default class Candidate {
                     status = document.createElement('div');
                     status.setAttribute('class', 'candidates__element__col rejected');
                     status.innerHTML = data[i].status;
-                } else if (data[i].status === 'Pending') {
+                } else {
                     status = document.createElement('div');
                     status.setAttribute('class', 'candidates__element__col pending');
                     status.innerHTML = data[i].status;
                 }
+                // if (data[i].status === 'Pending')
 
                 let file;
                 if (data[i].status === 'Accepted') {
@@ -177,12 +186,13 @@ export default class Candidate {
                     rejected.setAttribute('class', 'candidates__element__col');
                     rejected.innerHTML = '<span class="material-icons rejected">file_download_off</span>';
                     file = rejected;
-                } else if (data[i].status === 'Pending') {
+                } else {
                     let pending = document.createElement('div');
                     pending.setAttribute('class', 'candidates__element__col');
                     pending.innerHTML = '<span class="material-icons pending">pending</span>';
                     file = pending;
                 }
+                // if (data[i].status === 'Pending') 
 
                 let element = document.createElement('div');
                 element.setAttribute('class', 'candidates__element');
@@ -197,6 +207,17 @@ export default class Candidate {
                 element.appendChild(file);
             }
         }
+    }
+
+    async updateStatus(status) {
+        this.status = status;
+        const body = {
+            "status": this.status
+        }
+        this.cin = localStorage.getItem('CIN');
+        const data = await fetchWithGet(`http://localhost:3000/candidate/?cin=${this.cin}`);
+        this.id = data[0].id;
+        await fetchWithData('PATCH', `http://localhost:3000/candidate/${this.id}`, body)
     }
 
     // Logout = remove CIN from localstorage and redirect to homepage
