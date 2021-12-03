@@ -47,7 +47,7 @@ export default class Candidate {
         this.city = city;
         // Init duplicate status
         this.duplicate = false;
-
+        let created_at = new Date().toISOString().slice(0, 10);
         // Generate the fetch body data
         let body = {
             "lastname": this.lastname,
@@ -57,7 +57,7 @@ export default class Candidate {
             "phone": this.phone,
             "city": this.city,
             "status": "Neutral",
-            "created_at": "2021-11-30",
+            "created_at": created_at,
             "username": this.generateLogin(this.email),
             "password": this.generatePassword(),
         }

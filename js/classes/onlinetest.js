@@ -106,7 +106,7 @@ export default class onlinetest {
       let radioInput = document.createElement("input");
       // Add Type + Name + Id + Data-Attribute
       radioInput.name = "question";
-        radioInput.type = "radio";
+      radioInput.type = "radio";
       radioInput.id = `answer_${i}`;
       radioInput.dataset.answer = obj[`answer_${i}`];
 

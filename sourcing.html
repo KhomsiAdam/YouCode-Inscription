@@ -18,6 +18,7 @@
 
     <!-- JS -->
     <script src="js/sourcing.js" type="module" defer></script>
+    <script src="js/result.js" type="module" defer></script>
 
 </head>
 
@@ -54,11 +55,11 @@
         <section class="administrative">
             <form class="form" id="administrative">
                 <h2 class="form__title">Test administratif</h2>
-                <p class="administrative__question"></p>
+                <p class="administrative__question" id="Q1administrative"></p>
                 <textarea class="form__textarea ss-shadow-2" name="a-answer-1" id="a-answer-1" cols="30" rows="10"></textarea>
-                <p class="administrative__question"></p>
+                <p class="administrative__question" id="Q2administrative"></p>
                 <textarea class="form__textarea ss-shadow-2" name="a-answer-2" id="a-answer-2" cols="30" rows="10"></textarea>
-                <p class="administrative__question"></p>
+                <p class="administrative__question" id="Q3administrative"></p>
                 <textarea class="form__textarea ss-shadow-2" name="a-answer-3" id="a-answer-3" cols="30" rows="10"></textarea>
                 <button class="form__button ss-shadow-2" id="administrative-submit">Soummettre une réponse</button>
             </form>
@@ -72,6 +73,7 @@
                 <button class="form__button ss-shadow-2" id="technical-submit">Soummettre une réponse</button>
             </form>
         </section>
+        <button class="form__button ss-shadow-2" id="export">Export File</button>
     </main>
     <footer class="footer ss-grid-center loading">
         <p class="footer__copyright">YouCode © 2021</p>

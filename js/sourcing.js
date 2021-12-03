@@ -17,6 +17,28 @@ document.addEventListener('DOMContentLoaded', () => {
     sourcing.getAdministrative();
     sourcing.getTechnical();
 
+    //Export file txt
+    //  document.getElementById("download").addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     let seriousgame__title = document.querySelector('.form__title').textContent;
+    //     let seriousgame__case = document.querySelector('.seriousgame__case').textContent;
+    //     let seriousgame__objective = document.querySelector('.seriousgame__objective').textContent;
+    //     let sresponse = document.getElementById('s-response').value;
+        
+    //     var dataSourcing = '\t' + seriousgame__title + '\n' + '\n' + seriousgame__case + '\n' + '\n' + seriousgame__objective + '\n' + '\n' + sresponse;
+    //     console.log(dataSourcing);
+    //     var type;
+    //     var file = new Blob([dataSourcing], [type = "text"]);
+    //     var anchor = document.createElement("a");
+    //    anchor.href = URL.createObjectURL(file);
+    //    anchor.download = "data.txt";
+    //    anchor.click();
+    //  });
+    // document.getElementById('serious-submi').addEventListener('click', (e) => {
+    //     e.preventDefault();
+        
+    // });
+    // Logout
     document.getElementById('logout').addEventListener('click', () => {
         let candidat = new Candidate();
         candidat.logout();

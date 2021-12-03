@@ -1,48 +1,74 @@
 {
   "candidate": [
+    {
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "mahdi233@gmail.com",
+      "cin": "A878787",
+      "phone": "0690904390",
+      "city": "marraekch",
+      "status": "Accepted",
+      "created_at": "2021-11-30",
+      "username": "mahdi233",
+      "password": "pN3hTfcJ",
+      "id": 1
+    },
+    {
+      "lastname": "jhon",
+      "firstname": "elmahdi",
+      "email": "elmahdi11.rammach@gmail.com",
+      "cin": "A194256",
+      "phone": "0602352723",
+      "city": "marraekch",
+      "status": "Neutral",
+      "created_at": "2021-11-30",
+      "username": "elmahdi11rammach",
+      "password": "sfN2qgw0",
+      "id": 2
+    }
   ],
-  "onlinetest" : [
-  {
-    "title": " Trouvez le nombre suivant dans cette suite logique de nombres :2 4 7 11 16.",
-    "answer_1": "22",
-    "answer_2": "23",
-    "answer_3": "24",
-    "answer_4": "25",
-    "right_answer": "22"
-  },
-  {
-    "title": "Quelle est la valeur de X ? 4 * 3 * 0 * 100 * 0.1 = X",
-    "answer_1": "145",
-    "answer_2": "0",
-    "answer_3": "11",
-    "answer_4": "23",
-    "right_answer": "0"
-  },
-  {
-    "title": "Complétez cette suite : 2 - 12 - 30 - 56 - ? - 132",
-    "answer_1": "99",
-    "answer_2": "34",
-    "answer_3": "30",
-    "answer_4": "94",
-    "right_answer": "94"
-  },
-  {
-    "title": " Si 2 # 3 = 36, et 10 # 4 = 1600, combien pourraient faire 2 # 4 ?",
-    "answer_1": "324",
-    "answer_2": "126",
-    "answer_3": "416",
-    "answer_4": "23",
-    "right_answer": "416"
-  },
-  {
-    "title": " Qui manque à cet alphabet tronqué : b, c, d, g, t, v, w",
-    "answer_1": "J",
-    "answer_2": "B",
-    "answer_3": "A",
-    "answer_4": "S",
-    "right_answer": "S"
-  }
-],
+  "onlinetest": [
+    {
+      "title": " Trouvez le nombre suivant dans cette suite logique de nombres :2 4 7 11 16.",
+      "answer_1": "22",
+      "answer_2": "23",
+      "answer_3": "24",
+      "answer_4": "25",
+      "right_answer": "22"
+    },
+    {
+      "title": "Quelle est la valeur de X ? 4 * 3 * 0 * 100 * 0.1 = X",
+      "answer_1": "145",
+      "answer_2": "0",
+      "answer_3": "11",
+      "answer_4": "23",
+      "right_answer": "0"
+    },
+    {
+      "title": "Complétez cette suite : 2 - 12 - 30 - 56 - ? - 132",
+      "answer_1": "99",
+      "answer_2": "34",
+      "answer_3": "30",
+      "answer_4": "94",
+      "right_answer": "94"
+    },
+    {
+      "title": " Si 2 # 3 = 36, et 10 # 4 = 1600, combien pourraient faire 2 # 4 ?",
+      "answer_1": "324",
+      "answer_2": "126",
+      "answer_3": "416",
+      "answer_4": "23",
+      "right_answer": "416"
+    },
+    {
+      "title": " Qui manque à cet alphabet tronqué : b, c, d, g, t, v, w",
+      "answer_1": "J",
+      "answer_2": "B",
+      "answer_3": "A",
+      "answer_4": "S",
+      "right_answer": "S"
+    }
+  ],
   "staff": [
     {
       "id": 1,
@@ -120,6 +146,157 @@
       "id": 12,
       "type": "technical",
       "exercise": "Quel est la définition d'une variable et quel est la différence entre une variable globale et locale."
+    }
+  ],
+  "result": [
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": "2021-11-30",
+      "seriousgame": {
+        "question": "Vous devez répondre à une problématique en particulier, avec toute une équipe. Vous pourrez être amené à débriefer de cet exercice avec un recruteur, donc réfléchissez bien à ce que vous allez dire, attention de ne pas juger vos « adversaires » car cela peut vous porter préjudice.",
+        "answer": "zzzzz"
+      },
+      "motivation": {
+        "question": "Pourquoi avez vous choisis notre école ?",
+        "answer": "zzzz"
+      },
+      "administrative": {
+        "quesion1": "Question 1.",
+        "question2": "Question 2.",
+        "question3": "Question 3.",
+        "answer1": "zzzz",
+        "answer2": "zzzz",
+        "answer3": "zzzzz"
+      },
+      "technical": {
+        "question": "Définissez une fonction et quel est la différence entre paramètre et argument."
+      },
+      "id": 1
+    },
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": "2021-11-30",
+      "seriousgame": {},
+      "motivation": {},
+      "administrative": {},
+      "technical": {},
+      "id": 2
+    },
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": "2021-11-30",
+      "seriousgame": {},
+      "motivation": {},
+      "administrative": {},
+      "technical": {},
+      "id": 3
+    },
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": "2021-11-30",
+      "seriousgame": {
+        "question": "Ce test consiste à vous mettre dans la peau d’un personnage que l’on vous attribue dans une situation donnée. Par exemple, un collaborateur lors d’un pause-café, un appel téléphonique avec un prospect, un client mécontent, annoncer ou recevoir une démission.",
+        "answer": "aaaaaa"
+      },
+      "motivation": {
+        "question": "Pourquoi avez vous choisis ce domaine ?",
+        "answer": "wwwwww"
+      },
+      "administrative": {
+        "quesion1": "Question 1.",
+        "question2": "Question 2.",
+        "question3": "Question 3.",
+        "answer1": "wwwwww",
+        "answer2": "wwwwww",
+        "answer3": "wwwwww"
+      },
+      "technical": {
+        "question": "Ce test consiste à vous mettre dans la peau d’un personnage que l’on vous attribue dans une situation donnée. Par exemple, un collaborateur lors d’un pause-café, un appel téléphonique avec un prospect, un client mécontent, annoncer ou recevoir une démission.",
+        "answer": "aaaaaa"
+      },
+      "id": 4
+    },
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": "2021-12-03T15:18:42.096Z",
+      "seriousgame": {
+        "question": "Vous devez répondre à une problématique en particulier, avec toute une équipe. Vous pourrez être amené à débriefer de cet exercice avec un recruteur, donc réfléchissez bien à ce que vous allez dire, attention de ne pas juger vos « adversaires » car cela peut vous porter préjudice.",
+        "answer": "aaaaaaaaa"
+      },
+      "motivation": {
+        "question": "Pourquoi avez vous choisis ce domaine ?",
+        "answer": "aaaaaa"
+      },
+      "administrative": {
+        "quesion1": "Question 1.",
+        "question2": "Question 2.",
+        "question3": "Question 3.",
+        "answer1": "aaaaaaa",
+        "answer2": "aaaaaaa",
+        "answer3": "aaaaaaaaa"
+      },
+      "technical": {
+        "question": "Vous devez répondre à une problématique en particulier, avec toute une équipe. Vous pourrez être amené à débriefer de cet exercice avec un recruteur, donc réfléchissez bien à ce que vous allez dire, attention de ne pas juger vos « adversaires » car cela peut vous porter préjudice.",
+        "answer": "aaaaaaaaa"
+      },
+      "id": 5
+    },
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": 1638544836000,
+      "seriousgame": {
+        "question": "C’est simple, on vous met en situation de stress en vous posant des questions ou en glissant des allusions destinées à vous provoquer. C’est assez facile de repérer ces tests - que l’on ne vous annonce bien évidemment pas-  au travers des questions comme : « Tout à l’heure vous avez commis une erreur, ça vous arrive souvent ?» , « Nous émettons de forts doutes sur vos capacités à occuper cette fonction, pas vous ? » ou encore « Êtes-vous sûre que vous êtes faite pour ce type de poste ? ».",
+        "answer": "aaaaaaaaqqqq"
+      },
+      "motivation": {
+        "question": "Comment vous voyez vous après la formation chez notre école ?",
+        "answer": "qqqqqqqqq"
+      },
+      "administrative": {
+        "quesion1": "Question 1.",
+        "question2": "Question 2.",
+        "question3": "Question 3.",
+        "answer1": "qqqqqqqqq",
+        "answer2": "qqqqqqqqq",
+        "answer3": "aaaaaaaaa"
+      },
+      "technical": {
+        "question": "C’est simple, on vous met en situation de stress en vous posant des questions ou en glissant des allusions destinées à vous provoquer. C’est assez facile de repérer ces tests - que l’on ne vous annonce bien évidemment pas-  au travers des questions comme : « Tout à l’heure vous avez commis une erreur, ça vous arrive souvent ?» , « Nous émettons de forts doutes sur vos capacités à occuper cette fonction, pas vous ? » ou encore « Êtes-vous sûre que vous êtes faite pour ce type de poste ? ».",
+        "answer": "aaaaaaaaqqqq"
+      },
+      "id": 6
+    },
+    {
+      "name": "elmahdi jhon",
+      "cin": "A878787",
+      "created_at": "2021-12-03",
+      "seriousgame": {
+        "question": "Vous devez répondre à une problématique en particulier, avec toute une équipe. Vous pourrez être amené à débriefer de cet exercice avec un recruteur, donc réfléchissez bien à ce que vous allez dire, attention de ne pas juger vos « adversaires » car cela peut vous porter préjudice.",
+        "answer": "aaaaaa"
+      },
+      "motivation": {
+        "question": "Pourquoi avez vous choisis notre école ?",
+        "answer": "aaaaaaawwwwww"
+      },
+      "administrative": {
+        "quesion1": "Question 1.",
+        "question2": "Question 2.",
+        "question3": "Question 3.",
+        "answer1": "qqqqqq",
+        "answer2": "qqqqqqq",
+        "answer3": "aaaaaa"
+      },
+      "technical": {
+        "question": "Vous devez répondre à une problématique en particulier, avec toute une équipe. Vous pourrez être amené à débriefer de cet exercice avec un recruteur, donc réfléchissez bien à ce que vous allez dire, attention de ne pas juger vos « adversaires » car cela peut vous porter préjudice.",
+        "answer": "aaaaaa"
+      },
+      "id": 7
     }
   ]
 }
