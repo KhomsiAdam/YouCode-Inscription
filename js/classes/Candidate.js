@@ -45,22 +45,9 @@ export default class Candidate {
         this.birthdate = birthdate;
         this.phone = phone;
         this.city = city;
+        this.created_at = new Date().toISOString().slice(0, 10);
         // Init duplicate status
         this.duplicate = false;
-        let created_at = new Date().toISOString().slice(0, 10);
-        // Generate the fetch body data
-        let body = {
-            "lastname": this.lastname,
-            "firstname": this.firstname,
-            "email": this.email,
-            "cin": this.cin,
-            "phone": this.phone,
-            "city": this.city,
-            "status": "Pending",
-            "created_at": created_at,
-            "username": this.generateLogin(this.email),
-            "password": this.generatePassword(),
-        }
 
         // Get all candidates and see if candidate already exists
         const data = await fetchWithGet(`http://localhost:3000/candidate/`);
@@ -83,10 +70,11 @@ export default class Candidate {
                 "firstname": this.firstname,
                 "email": this.email,
                 "cin": this.cin,
+                "birthdate": this.birthdate,
                 "phone": this.phone,
                 "city": this.city,
                 "status": "Pending",
-                "created_at": "2021-11-30",
+                "created_at": this.created_at,
                 "username": this.generateLogin(this.email),
                 "password": this.generatePassword(),
             }
@@ -176,15 +164,19 @@ export default class Candidate {
                 let status;
                 if (data[i].status === 'Accepted') {
                     status = document.createElement('div');
-                    status.setAttribute('class', 'candidates__element__col accepted');
+                    status.setAttribute('class', 'candidates__element__col');
                     status.innerHTML = data[i].status;
                 } else if (data[i].status === 'Rejected') {
                     status = document.createElement('div');
-                    status.setAttribute('class', 'candidates__element__col rejected');
+                    status.setAttribute('class', 'candidates__element__col');
                     status.innerHTML = data[i].status;
-                } else {
+                } else if (data[i].status === 'Pending') {
                     status = document.createElement('div');
-                    status.setAttribute('class', 'candidates__element__col pending');
+                    status.setAttribute('class', 'candidates__element__col');
+                    status.innerHTML = data[i].status;
+                } else if (data[i].status === 'Sourced') {
+                    status = document.createElement('div');
+                    status.setAttribute('class', 'candidates__element__col');
                     status.innerHTML = data[i].status;
                 }
                 // if (data[i].status === 'Pending')
@@ -193,17 +185,22 @@ export default class Candidate {
                 if (data[i].status === 'Accepted') {
                     let accepted = document.createElement('div');
                     accepted.setAttribute('class', 'candidates__element__col');
-                    accepted.innerHTML = '<span class="material-icons accepted">file_download</span>';
+                    accepted.innerHTML = '<span class="material-icons accepted-icon">done</span>';
                     file = accepted;
                 } else if (data[i].status === 'Rejected') {
                     let rejected = document.createElement('div');
                     rejected.setAttribute('class', 'candidates__element__col');
-                    rejected.innerHTML = '<span class="material-icons rejected">file_download_off</span>';
+                    rejected.innerHTML = '<span class="material-icons rejected-icon">do_not_disturb</span>';
                     file = rejected;
-                } else {
+                } else if (data[i].status === 'Pending') {
                     let pending = document.createElement('div');
                     pending.setAttribute('class', 'candidates__element__col');
-                    pending.innerHTML = '<span class="material-icons pending">pending</span>';
+                    pending.innerHTML = '<span class="material-icons pending-icon">pending</span>';
+                    file = pending;
+                } else if (data[i].status === 'Sourced') {
+                    let pending = document.createElement('div');
+                    pending.setAttribute('class', 'candidates__element__col sourced');
+                    pending.innerHTML = `<span class="material-icons sourced-icon" data-cin="${data[i].cin}">file_download</span>`;
                     file = pending;
                 }
                 // if (data[i].status === 'Pending') 

@@ -725,9 +725,6 @@ input[type=radio]:checked:after {
 /* ============ */
 /* Register CSS */
 /* ============ */
-#sign-in {
-  height: 100vh;
-}
 @media only screen and (min-width: 1024px) {
   #sign-in {
     height: calc(100vh - 229px);
@@ -823,26 +820,24 @@ input[type=radio]:checked:after {
 .candidates__element__col {
   flex-basis: 16.66%;
 }
-.candidates__element__col .accepted {
-  background: #008f70;
+.candidates__element__col .material-icons {
   padding: 5px;
   border-radius: 10px;
   color: #ffffff;
+  cursor: default;
+}
+.candidates__element__col .sourced-icon {
+  background: #008f70;
   cursor: pointer;
 }
-.candidates__element__col .rejected {
+.candidates__element__col .rejected-icon {
   background: #c94242;
-  padding: 5px;
-  border-radius: 10px;
-  color: #ffffff;
-  cursor: not-allowed;
 }
-.candidates__element__col .pending {
+.candidates__element__col .accepted-icon {
+  background: #058dfe;
+}
+.candidates__element__col .pending-icon {
   background: #bebe5f;
-  padding: 5px;
-  border-radius: 10px;
-  color: #ffffff;
-  cursor: unset;
 }
 
 /* ============ */
@@ -866,23 +861,48 @@ section form {
   width: 100%;
 }
 
+.results.show {
+  height: 100%;
+  border-radius: 5px;
+  padding: 3em;
+  text-align: center;
+  background: #ffffff;
+  margin-top: 5em;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  outline: none;
+}
+.disabled:focus {
+  outline: none;
+}
+
+#export {
+  background: #008f70;
+}
+
+#export.hide {
+  display: none;
+}
+
 /* ============== */
 /* Testonline CSS */
 /* ============== */
 .quiz-app {
-  height: calc(100vh - 259px);
   width: 100%;
 }
 @media only screen and (min-width: 1024px) {
   .quiz-app {
     width: 70%;
-    height: calc(100vh - 269px);
   }
 }
 @media only screen and (min-width: 1280px) {
   .quiz-app {
     width: 550px;
-    height: calc(100vh - 180px);
   }
 }
 
@@ -953,9 +973,9 @@ section form {
 }
 
 .quiz-app .results.show {
-  height: 150px;
+  height: 100%;
   border-radius: 5px;
-  padding: 3em 3em 1em 3em;
+  padding: 3em;
   text-align: center;
   background: #ffffff;
   margin-top: 1em;
@@ -1011,12 +1031,18 @@ section form {
 /* ======== */
 /* Main CSS */
 /* ======== */
+body {
+  justify-content: space-between;
+  display: flex;
+  background: #f7f7f7;
+  flex-direction: column;
+}
+
 .main {
   height: 100%;
   position: relative;
   top: 70px;
   padding: 4em 20px 0 20px;
-  background: #f7f7f7;
 }
 @media only screen and (min-width: 1024px) {
   .main {

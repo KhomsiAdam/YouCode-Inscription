@@ -143,14 +143,14 @@ export default class Onlinetest {
                 theLabel.appendChild(theLabelText);
 
 
-      // Create Radio Input
-      let radioInput = document.createElement("input");
-      // Add Type + Name + Id + Data-Attribute
-      radioInput.name = "question";
-      radioInput.type = "radio";
-      radioInput.id = `answer_${i}`;
-      radioInput.dataset.answer = obj[`answer_${i}`];
-              
+                // Create Radio Input
+                //   let radioInput = document.createElement("input");
+                // Add Type + Name + Id + Data-Attribute
+                radioInput.name = "question";
+                radioInput.type = "radio";
+                radioInput.id = `answer_${i}`;
+                radioInput.dataset.answer = obj[`answer_${i}`];
+
                 // Add Input + Label To Main Div
                 mainDiv.appendChild(radioInput);
                 mainDiv.appendChild(theLabel);

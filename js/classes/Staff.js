@@ -100,19 +100,18 @@ export default class Staff {
 
     TECHNICAL TEST  : ==================================================
 
-          QUETION : ${data[0].technical.question}
+          QUESTION : ${data[0].technical.question}
           ANSWER  : ${data[0].technical.answer}
 
         ==================================================
                             YOUCODE   
         ==================================================
     `;
-            var file = new Blob([result], [type = "text"]);
-            var anchor = document.createElement("a");
-           anchor.href = URL.createObjectURL(file);
-           anchor.download = "data.txt";
-           anchor.click();
-        console.log(datastring);
+        var file = new Blob([result], [type = "text"]);
+        var anchor = document.createElement("a");
+        anchor.href = URL.createObjectURL(file);
+        anchor.download = `${data[0].name}_${data[0].cin}_${data[0].created_at}.txt`;
+        anchor.click();
         return data;
 
     }

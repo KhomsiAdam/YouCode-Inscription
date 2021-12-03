@@ -18,3 +18,27 @@ section {
         width: 100%;
     }
 }
+.results.show {
+    height: 100%;
+    border-radius: 5px;
+    padding: 3em;
+    text-align: center;
+    background: ss-var($colors, "neutral", "white");
+    margin-top: 5em;
+    font-size: 1.8rem;
+    font-weight: ss-var($font-weight, "medium");
+}
+.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    outline: none;
+    &:focus {
+        outline: none;
+    }
+}
+#export {
+    background: ss-var($colors, "secondary", "green");
+}
+#export.hide {
+    display: none;
+}

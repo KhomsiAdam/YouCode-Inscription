@@ -8,5 +8,5 @@ export function regexEmail(value) {
 }
 // Regular expression for CIN
 export function regexCIN(value) {
-    return value.match(/^(a|A)([0-9]{6})$/, "") ? true : false;
+    return value.match(/^([A-Z]|[a-z])([0-9]){6}$/, "") ? true : false;
 }

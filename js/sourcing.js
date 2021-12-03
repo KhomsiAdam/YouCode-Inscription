@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let sourcing = new Sourcing();
     sourcing.getCase();
-    sourcing.getMotivation();
-    sourcing.getAdministrative();
-    sourcing.getTechnical();
+    
+    // sourcing.getMotivation();
+    // sourcing.getAdministrative();
+    // sourcing.getTechnical();
 
     //Export file txt
     //  document.getElementById("download").addEventListener('click', (e) => {

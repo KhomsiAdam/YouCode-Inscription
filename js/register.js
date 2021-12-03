@@ -46,16 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     sign_up_error.innerHTML = "Votre age n'est pas valide (doit être entre 18 et 35 ans).";
                     birthdate.classList.add('error');
                 }
-            } else if (!regexInputs(lastname.value) || !regexInputs(firstname.value) || !regexEmail(email.value) || !regexCIN(cin.value) || !regexInputs(birthdate.value) || !regexInputs(phone.value) || !regexInputs(city.value)) {
+            } else if (!regexInputs(lastname.value) || !regexInputs(firstname.value) || !regexEmail(email.value) || !regexInputs(birthdate.value) || !regexInputs(phone.value) || !regexInputs(city.value)) {
                 sign_up_error.innerHTML = 'Veuillez entrer des charactères valides.';
                 regexError(lastname);
                 regexError(firstname);
                 regexEmailError(email);
-                regexCINError(cin);
                 regexError(birthdate);
                 regexError(phone);
                 regexError(city);
             }
+            if (!regexCIN(cin.value)) regexCINError(cin, sign_up_error);
         }
     })
     removeError(lastname, sign_up_error);

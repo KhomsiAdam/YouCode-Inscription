@@ -39,6 +39,7 @@
                 <p class="seriousgame__case"></p>
                 <p class="seriousgame__objective"></p>
                 <textarea class="form__textarea ss-shadow-2" name="s-response" id="s-response" cols="30" rows="10"></textarea>
+                <p id="serious-error" class="input-error ss-align-center"></p>
                 <button class="form__button ss-shadow-2" id="serious-submit">Soummettre une réponse</button>
             </form>
         </section>
@@ -48,6 +49,7 @@
                 <h2 class="form__title">Test de motivation</h2>
                 <p class="motivation__question"></p>
                 <textarea class="form__textarea ss-shadow-2" name="m-answer" id="m-answer" cols="30" rows="10"></textarea>
+                <p id="motivation-error" class="input-error ss-align-center"></p>
                 <button class="form__button ss-shadow-2" id="motivation-submit">Soummettre une réponse</button>
             </form>
         </section>
@@ -61,6 +63,7 @@
                 <textarea class="form__textarea ss-shadow-2" name="a-answer-2" id="a-answer-2" cols="30" rows="10"></textarea>
                 <p class="administrative__question" id="Q3administrative"></p>
                 <textarea class="form__textarea ss-shadow-2" name="a-answer-3" id="a-answer-3" cols="30" rows="10"></textarea>
+                <p id="administrative-error" class="input-error ss-align-center"></p>
                 <button class="form__button ss-shadow-2" id="administrative-submit">Soummettre une réponse</button>
             </form>
         </section>
@@ -70,10 +73,12 @@
                 <h2 class="form__title">Test technique</h2>
                 <p class="technical__question"></p>
                 <textarea class="form__textarea ss-shadow-2" name="t-answer" id="t-answer" cols="30" rows="10"></textarea>
+                <p id="technical-error" class="input-error ss-align-center"></p>
                 <button class="form__button ss-shadow-2" id="technical-submit">Soummettre une réponse</button>
+                <p id="result-error" class="input-error ss-align-center"></p>
+                <button class="form__button ss-shadow-2 hide" id="export">Confirmer</button>
             </form>
         </section>
-        <button class="form__button ss-shadow-2" id="export">Export File</button>
     </main>
     <footer class="footer ss-grid-center loading">
         <p class="footer__copyright">YouCode © 2021</p>

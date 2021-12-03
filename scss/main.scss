@@ -12,12 +12,17 @@
 /* ======== */
 /* Main CSS */
 /* ======== */
+body {
+    justify-content: space-between;
+    display: flex;
+    background: ss-var($colors, "neutral", "lightgray");
+    flex-direction: column;
+}
 .main {
     height: 100%;
     position: relative;
     top: 70px;
     padding: 4em 20px 0 20px;
-    background: ss-var($colors, "neutral", "lightgray");
     @include breakpoint-min(ss-var($breakpoints, "1024")) {
         display: flex;
         flex-direction: column;

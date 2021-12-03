@@ -17,31 +17,20 @@
 }
 .candidates {
     width: 1000px;
-    // height: calc(100vh - 219px);
     height: 100%;
     padding: 4em 0;
     @include breakpoint-max(ss-var($breakpoints, "360")) {
-        // height: calc(100vh - 217px);
     }
     @include breakpoint-min(ss-var($breakpoints, "1280")) {
-        // height: calc(100vh - 229px);
         padding: 4em;
         width: 100%;
     }
-    // @include breakpoint-min(ss-var($breakpoints, "1440")) {
-    //     height: calc(100vh - 234px);
-    // }
-    // @include breakpoint-min(ss-var($breakpoints, "1920")) {
-    //     height: calc(100vh - 238px);
-    // }
     display: flex;
     flex-direction: column;
-    // gap: 2em;
     text-align: center;
     &__headers {
         padding: .75em 0;
         border-radius: 10px 10px 0 0;
-        // border: 1px solid #bdbdbd;
         display: flex;
         align-items: center;
         font-size: 1.8rem;
@@ -77,26 +66,24 @@
         // }
         &__col {
             flex-basis: 16.66%;
-            .accepted {
-                background: ss-var($colors, "secondary", "green");
+            .material-icons {
                 padding: 5px;
                 border-radius: 10px;
                 color: ss-var($colors, "neutral", "white");
+                cursor: default;
+            }
+            .sourced-icon {
+                background: ss-var($colors, "secondary", "green");
                 cursor: pointer;
             }
-            .rejected {
+            .rejected-icon {
                 background: ss-var($colors, "secondary", "red");
-                padding: 5px;
-                border-radius: 10px;
-                color: ss-var($colors, "neutral", "white");
-                cursor: not-allowed;
             }
-            .pending {
+            .accepted-icon {
+                background: ss-var($colors, "primary", "blue");
+            }
+            .pending-icon {
                 background: ss-var($colors, "secondary", "yellow");
-                padding: 5px;
-                border-radius: 10px;
-                color: ss-var($colors, "neutral", "white");
-                cursor: unset;
             }
         }
     }

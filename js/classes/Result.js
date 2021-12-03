@@ -1,5 +1,6 @@
 // Import fetch module
 import { fetchWithData,fetchWithGet } from '../modules/fetch.js';
+import Candidate from './Candidate.js';
 
 export default class Result {
 
@@ -41,7 +42,7 @@ export default class Result {
                 "answer": this.Amotivation
             },
             "administrative": {
-                "quesion1": this.Q1administrative,
+                "question1": this.Q1administrative,
                 "question2": this.Q2administrative,
                 "question3": this.Q3administrative,
                 "answer1": this.A1administrative,
@@ -56,6 +57,8 @@ export default class Result {
         }
 
         await fetchWithData('POST', 'http://localhost:3000/result/', body)
+        let candidate = new Candidate();
+        candidate.updateStatus('Sourced');
     }
      
     seriousgame(QseriousGame,AseriousGame) {

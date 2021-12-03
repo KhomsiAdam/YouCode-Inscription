@@ -11,14 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     auth();
     loading();
 
-    //export file txt 
-    document.getElementById('download').addEventListener('click', (e) => {
-        e.preventDefault();
-        let cin = "A878787";
-        let dataCandidat = new Staff();
-        dataCandidat.getdataResult(cin);
-       
-    });
     document.getElementById('logout').addEventListener('click', () => {
         let staff = new Staff();
         staff.logout()
@@ -30,4 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Any code that needs to run after the document fully loads with all the assets
 window.addEventListener('load', () => {
+    const icons = document.querySelectorAll('.sourced-icon');
+    icons.forEach(icon => {
+        console.log(icon.getAttribute('data-cin'));
+        icon.addEventListener('click', () => {
+            console.log(icon.getAttribute('data-cin'));
+            let dataCandidat = new Staff();
+            dataCandidat.getdataResult(icon.getAttribute('data-cin'));    
+        })
+    })
 })

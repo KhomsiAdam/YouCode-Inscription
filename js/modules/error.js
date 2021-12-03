@@ -20,9 +20,10 @@ export function regexEmailError(email) {
     }
 }
 // ...when it isn't a valid CIN format
-export function regexCINError(cin) {
+export function regexCINError(cin, error) {
     if (!regexCIN(cin.value)) {
         cin.classList.add('error');
+        error.innerHTML = 'Doit commencer avec une lettre et 6 nombres.';
     }
 }
 // Remove error outline from input on focus

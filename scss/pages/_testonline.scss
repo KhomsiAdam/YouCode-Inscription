@@ -6,26 +6,18 @@
 /* ============== */
 
 .quiz-app {
-    // height: 100%;
-    height: calc(100vh - 259px);
     width: 100%;
     @include breakpoint-min(ss-var($breakpoints, "1024")) {
         width: 70%;
-        height: calc(100vh - 269px);
     }
     @include breakpoint-min(ss-var($breakpoints, "1280")) {
         width: 550px;
-        height: calc(100vh - 180px);
     }
 }
 
 .quiz-app {
-    // margin: 20px auto;
-    // width: 800px;
     background-color: #f8f8f8;
     margin-top: 4em;
-    // display: grid;
-    // justify-content: center;
 }
 .quiz-app .quiz-info {
     display: flex;
@@ -80,9 +72,9 @@
 }
 
 .quiz-app .results.show {
-    height: 150px;
+    height: 100%;
     border-radius: 5px;
-    padding: 3em 3em 1em 3em;
+    padding: 3em;
     text-align: center;
     background: ss-var($colors, "neutral", "white");
     margin-top: 1em;
