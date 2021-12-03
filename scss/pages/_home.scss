@@ -1,6 +1,26 @@
 // Abstracts
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 /* ======== */
 /* Home CSS */
 /* ======== */
+.hero {
+    @include bg-img(100%, calc(100vh - 70px), "../images/s1.jpg", no-repeat, 1280px 100%, center);
+    @include breakpoint-min(ss-var($breakpoints, "1280")) {
+        background-size: 100% 100%;
+    }
+    &__formation {
+        color: ss-var($colors, "neutral", "white");
+        width: 70%;
+    }
+    &__inscription {
+        width: 180px;
+        height: 60px;
+        border-radius: 10px;
+        color: ss-var($colors, "neutral", "white");
+        background: ss-var($colors, "primary", "blue");
+        font-size: 2rem;
+        font-weight: 600;
+        margin-top: 2em;
+    }
+}

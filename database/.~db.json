@@ -1,5 +1,19 @@
 {
   "candidate": [
+    {
+      "lastname": "Doe",
+      "firstname": "John",
+      "email": "john.doe@censync.com",
+      "cin": "A998877",
+      "birthdate": "1993-12-03",
+      "phone": "123456789",
+      "city": "Safi",
+      "status": "Sourced",
+      "created_at": "2021-12-03",
+      "username": "johndoe",
+      "password": "ZXPr7S4Z",
+      "id": 1
+    }
   ],
   "onlinetest": [
     {
@@ -123,5 +137,31 @@
     }
   ],
   "result": [
+    {
+      "name": "John Doe",
+      "cin": "A998877",
+      "created_at": "2021-12-03",
+      "seriousgame": {
+        "question": "C’est simple, on vous met en situation de stress en vous posant des questions ou en glissant des allusions destinées à vous provoquer. C’est assez facile de repérer ces tests - que l’on ne vous annonce bien évidemment pas-  au travers des questions comme : « Tout à l’heure vous avez commis une erreur, ça vous arrive souvent ?» , « Nous émettons de forts doutes sur vos capacités à occuper cette fonction, pas vous ? » ou encore « Êtes-vous sûre que vous êtes faite pour ce type de poste ? ».",
+        "answer": "zzzzzzzzz"
+      },
+      "motivation": {
+        "question": "Pourquoi avez vous choisis notre école ?",
+        "answer": "zzzzzzzzzzzz"
+      },
+      "administrative": {
+        "question1": "Vous êtes toujours ponctuel(le) à vos rendez-vous ?",
+        "question2": "Lorsque l’on démontre que vous avez fait une erreur, cela vous affecte t-il ?",
+        "question3": "Vous considère-t-on comme quelqu’un sachant garder son sang-froid en toutes circonstances ?",
+        "answer1": "zzzzzzzzzz",
+        "answer2": "zzzzzzzzzz",
+        "answer3": "zzzzzzzz"
+      },
+      "technical": {
+        "question": "Réaliser un programme simple qui incrémente un nombre de 0 à 10 et qui affiche sa valeur à chaque incrémentation.",
+        "answer": "zzzzzzzzzz"
+      },
+      "id": 1
+    }
   ]
 }

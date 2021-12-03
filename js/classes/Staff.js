@@ -82,25 +82,37 @@ export default class Staff {
     SERIOUS GAME   : ==================================================
 
         QUESTION   : ${data[0].seriousgame.question}
+
         ANSWER     : ${data[0].seriousgame.answer}
     
     MOTIVATION TEST : ==================================================
     
           QUESTION  : ${data[0].motivation.question}
+
           ANSWER    : ${data[0].motivation.answer}
 
     ADMINISTRATIVE TEST  : ==================================================
 
           QUESTION 1 :${data[0].administrative.question1}
+
           ANSWER     :${data[0].administrative.answer1}
+
+          ___________________________________________________________________
+
           QUESTION 2 :${data[0].administrative.question2}
+
           ANSWER     :${data[0].administrative.answer2}
+
+          ___________________________________________________________________
+
           QUESTION 3 :${data[0].administrative.question3}
+
           ANSWER     :${data[0].administrative.answer3}
 
     TECHNICAL TEST  : ==================================================
 
           QUESTION : ${data[0].technical.question}
+
           ANSWER  : ${data[0].technical.answer}
 
         ==================================================

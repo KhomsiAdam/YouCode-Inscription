@@ -22,6 +22,7 @@ body {
     height: 100%;
     position: relative;
     top: 70px;
+    margin-bottom: 70px;
     padding: 4em 20px 0 20px;
     @include breakpoint-min(ss-var($breakpoints, "1024")) {
         display: flex;

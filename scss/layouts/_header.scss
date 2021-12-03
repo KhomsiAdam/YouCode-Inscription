@@ -26,7 +26,7 @@
         justify-content: end;
         justify-content: flex-end;
         &__link {
-            width: 130px;
+            width: 150px;
             height: 40px;
             border-radius: 5px;
             color: ss-var($colors, "neutral", "white");
@@ -41,7 +41,7 @@
                 }
             }
         }
-        #inscription {
+        #admin {
             background: ss-var($colors, "primary", "blue");
         }
         #logout {

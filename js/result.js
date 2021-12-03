@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Qmotivation.disabled = "true";
             Amotivation.disabled = "true";
             document.getElementById('motivation-submit').classList.add('disabled');
-            if (AseriousGame.value !== '' && Amotivation.value !== '' && A1administrative.value !== '' && A2administrative.value !== '' && A3administrative.value !== '' && Atechnical.value !== '') {
+            if (AseriousGame.disabled === true && Amotivation.disabled === true && A1administrative.disabled === true && A2administrative.disabled === true && A3administrative.disabled === true && Atechnical.disabled === true) {
                 export_btn.classList.remove('hide');
             }
         } else {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             A2administrative.disabled = "true";
             A3administrative.disabled = "true";
             document.getElementById('administrative-submit').classList.add('disabled');
-            if (AseriousGame.value !== '' && Amotivation.value !== '' && A1administrative.value !== '' && A2administrative.value !== '' && A3administrative.value !== '' && Atechnical.value !== '') {
+            if (AseriousGame.disabled === true && Amotivation.disabled === true && A1administrative.disabled === true && A2administrative.disabled === true && A3administrative.disabled === true && Atechnical.disabled === true) {
                 export_btn.classList.remove('hide');
             }
         } else {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Qtechnical.disabled = "true";
             Atechnical.disabled = "true";
             document.getElementById('technical-submit').classList.add('disabled');
-            if (AseriousGame.value !== '' && Amotivation.value !== '' && A1administrative.value !== '' && A2administrative.value !== '' && A3administrative.value !== '' && Atechnical.value !== '') {
+            if (AseriousGame.disabled === true && Amotivation.disabled === true && A1administrative.disabled === true && A2administrative.disabled === true && A3administrative.disabled === true && Atechnical.disabled === true) {
                 export_btn.classList.remove('hide');
             }
         } else {
