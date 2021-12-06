@@ -1,5 +1,6 @@
 // Import fetch module
 import { fetchWithData, fetchWithGet } from '../modules/fetch.js';
+import { addError } from '../modules/error.js';
 
 export default class Candidate {
 
@@ -55,7 +56,9 @@ export default class Candidate {
             console.log(data);
             for (let i = 0; i < data.length; i++) {
                 if (data[i].email == this.email || data[i].cin == this.cin) {
-                    console.log("Candidate already exists");
+                    document.getElementById('sign-up-error').innerHTML = 'Candidat existe déjà.';
+                    document.getElementById('email').classList.add('error');
+                    document.getElementById('cin').classList.add('error');
                     this.duplicate = true;
                     break;
                 }

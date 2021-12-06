@@ -22,13 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Any code that needs to run after the document fully loads with all the assets
 window.addEventListener('load', () => {
-    const icons = document.querySelectorAll('.sourced-icon');
-    icons.forEach(icon => {
-        console.log(icon.getAttribute('data-cin'));
-        icon.addEventListener('click', () => {
+    if (document.querySelectorAll('.sourced-icon')) {
+        const icons = document.querySelectorAll('.sourced-icon');
+        icons.forEach(icon => {
             console.log(icon.getAttribute('data-cin'));
-            let dataCandidat = new Staff();
-            dataCandidat.getdataResult(icon.getAttribute('data-cin'));    
+            icon.addEventListener('click', () => {
+                console.log(icon.getAttribute('data-cin'));
+                let dataCandidat = new Staff();
+                dataCandidat.getdataResult(icon.getAttribute('data-cin'));
+            })
         })
-    })
+    }
 })
